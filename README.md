@@ -31,8 +31,10 @@
 ・会員登録して、自信のスタイリンングを公開できる
 
 ## 設計書
+・ワイヤーフレーム
+https://app.diagrams.net/#G15-OGpVSXtZ3rnNyjZNjCX9hSZqCgGGSZ
 ・データベース設計(ER図)
-
+https://app.diagrams.net/#G17NbNUpoBFW2FRAEM6RXjSMXd5ZoL0jiP
 ・画面設計
 
 ・アプリケーション詳細設計
