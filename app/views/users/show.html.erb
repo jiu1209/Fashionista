@@ -1,0 +1,19 @@
+   <div class= "container">
+	<div class="row">	
+		<div class="col-xs-9">
+          <h2>ユーザー詳細</h2>
+            <tr>
+              <td><%= attachment_image_tag @user, :image, format: "jpeg", fallback:"no_image.jpg", size: "180x180" %></td>
+              <td><%= @user.name %></td>
+              <td><%= @user.gender %></td>
+              <td><%= @user.height %></td>
+              <td><%= @user.favorite_brand %></td>
+            </tr>
+            <tr>
+	          <td><%= @user.introduction %></td>
+            </tr>
+            <%= link_to "編集する", edit_user_path, class: "btn btn-primary btn-md", role: "botton" %>
+            <%= link_to "スタイリングを投稿する", edit_user_path, class: "btn btn-primary btn-md", role: "botton" %>
+          </div>
+        </div>
+     </div>

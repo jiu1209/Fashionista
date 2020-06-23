@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+table{
+  width: 50%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table th,table td{
+  padding: 20px 0;
+  text-align: center;
+}
+.loginmove{
+	padding: 60px;
+}
+tr .none{
+ background-color: transparent;
+}
+.indextot {
+  margin: 120px;
+}
+.userbox {
+  display: inline-flex;
+}
+.userindex {
+  margin:  20px;
+}
