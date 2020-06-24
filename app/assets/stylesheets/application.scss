@@ -38,11 +38,15 @@ tr .none{
  background-color: transparent;
 }
 .indextot {
-  margin: 120px;
+  margin: 100px;
 }
 .userbox {
   display: inline-flex;
 }
 .userindex {
   margin:  20px;
+}
+.image{
+   border-radius: 50%; 
+   object-fit: cover;
 }

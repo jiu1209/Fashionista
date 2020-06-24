@@ -1,11 +1,11 @@
+<div class="indextot">
 <div class="container"> 
   <div class="row"> 
     <div class="col-xs-12">
      <h3>プロフィール登録</h3>
-  <table>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
-
+　　 <table>
     <tr>
       <div class="field">
         <th><%= f.label :ユーザー名 %><br /></th>
@@ -63,11 +63,12 @@
          <th><%= f.submit "新規登録", class:"btn btn-success btn-lg" %></th>
        </div>
      </tr>
+     </table>
     <% end %>
-    </table>
     <div class="loginmove">
       <h4>登録済みのユーザーはこちらから<%= link_to "ログイン",new_user_session_path %>してください</h4>
     </div>
   </div>
  </div>
+</div>
 </div>

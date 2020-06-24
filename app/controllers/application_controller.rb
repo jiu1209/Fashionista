@@ -4,8 +4,16 @@ class ApplicationController < ActionController::Base
   	case resource
   	
   	when @user
-  		users_path
+  		user_path(current_user.id)
   	end
+  end
+
+  def after_sign_out_path_for(resource)
+    case resource
+  
+    when :user
+      new_user_session_path
+    end
   end
 
   protected

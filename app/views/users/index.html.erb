@@ -2,60 +2,63 @@
   <div class= "container">
 	<div class="row">	
 		<div class="col-xs-3">
-			<table class="table">
-			  	<h4>スタイリングランキング</h4>
-			  <tr>
-			  	<th>Women's</th>
-			  </tr>
-			  <tr>
-			  	<th>men's</th>
-			  </tr>
-			  <tr>
-			  	<th></th>
-			  </tr>
-			</table>
-			<table class="table">
-				<h4>注目ブランド</h4>
-			　<tr>
-				<th>coen</th>
-			 </tr>
-			 <tr>
-			 	<th>HARE</th>
-			 </tr>
-			 <tr>
-			 	<th>nikoand</th>
-			 </tr>
-			 <tr>
-			 	<th>ユニクロ</th>
-			 </tr>
-			 <tr>
-			 	<th>M×M×M</th>
-			 </tr>
-			 <tr>
-			  	<th></th>
-			 </tr>
-			</table>
+
+			 <%= render 'layouts/styling' %> 
+
 			 <li><%= link_to " Logout", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out" %> </li>
 		</div>
-		<div class="userindex">
-	      <div class="col-xs-8">
-             <h2>Women's</h2>
-               <% @users.each do |user| %>
+	      <div class="col-xs-9">
+	      	<h2>User's all</h2>
+	      	  <% @users.each do |user| %>
                <div class="userbox">
                 <table>
               	  <tr>
-                    <td><%= attachment_image_tag user, :image, format: "jpeg", fallback:"no_image.jpg", size: "180x180" %></td>
+                    <td><%= attachment_image_tag user, :image, format: "jpeg", fallback:"no_image.jpg", size: "200x200" %></td>
                   </tr>
                   <tr>
                     <td><%= link_to user.name, user_path(user.id) %></td>
                   </tr>
                   <tr>
-                    <td><%= user.height %></td>
+                    <td><%= user.height %> | <%= user.gender %> | <%= user.favorite_brand %></td>
                   </tr>
                 </table>
               </div>
               <% end %>
-          </div>
+              <div align="right"><%= paginate @users %></div>
+             <h2>Women's</h2>
+               <% @users1.each do |user| %>
+               <div class="userbox">
+                <table>
+              	  <tr>
+                    <td><%= attachment_image_tag user, :image, format: "jpeg", fallback:"no_image.jpg", size: "200x200" %></td>
+                  </tr>
+                  <tr>
+                    <td><%= link_to user.name, user_path(user.id) %></td>
+                  </tr>
+                   <tr>
+                    <td><%= user.height %> | <%= user.gender %> | <%= user.favorite_brand %></td>
+                  </tr>
+                </table>
+              </div>
+              <% end %>
+               <div align="right"><%= paginate @users1 %></div>
+              <h2>Men's</h2>
+               <% @users2.each do |user| %>
+               <div class="userbox">
+                <table>
+              	  <tr>
+                    <td><%= attachment_image_tag user, :image, format: "jpeg", fallback:"no_image.jpg", size: "200x200" %></td>
+                  </tr>
+                  <tr>
+                    <td><%= link_to user.name, user_path(user.id) %></td>
+                  </tr>
+                   <tr>
+                    <td><%= user.height %> | <%= user.gender %> | <%= user.favorite_brand %></td>
+                  </tr>
+                </table>
+                 </div>
+              <% end %>
+               <div align="right"><%= paginate @users2 %></div>
         </div>
       </div>
     </div>

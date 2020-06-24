@@ -1,8 +1,10 @@
+<%= flash[:error] %>
+<div class="indextot">
 <div class="container"> 
   <div class="row">
 　　<h3>ユーザーはこちらからログイン</h3>
-　　　 <table>
 　　　　 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <table>
       <tr>
   　　   <div class="field">
            <th><%= f.label :メールアドレス%><br /></th>
@@ -28,4 +30,5 @@
       </div>
     </div>
    </div>
+</div>
 </div>

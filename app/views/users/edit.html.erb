@@ -1,1 +1,65 @@
-aa
+<div class="indextot">
+<div class="container"> 
+  <div class="row"> 
+    <div class="col-xs-12">
+     <h3>プロフィール編集</h3>
+    <%= form_for(@user) do |f| %>
+    <table>
+    <tr>
+      <div class="field">
+        <th><%= f.label :ユーザー名 %><br /></th>
+        <td><%= f.text_field :name, autofocus: true, autocomplete: "name" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th><%= f.label :メールアドレス %><br /></th>
+        <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+      </div>
+    </tr>
+    
+    <tr>
+      <div class="field">
+        <th><%= f.label :性別 %> (男性or女性)<br /></th>
+        <td><%= f.text_field :gender, autofocus: true, autocomplete: "gender" %></td>
+      </div>
+    </tr>
+    
+    <tr>
+      <div class="field">
+        <th><%= f.label :身長 %><br /></th>
+        <td><%= f.text_field :height, autofocus: true, autocomplete: "height" %></td>
+      </div>
+    </tr>
+    
+    <tr>
+      <div class="field">
+        <th><%= f.label :好きなブランド %><br /></th>
+        <td><%= f.text_field :favorite_brand, autofocus: true, autocomplete: "favorite_brand" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th><%= f.label :自己紹介 %><br /></th>
+        <td><%= f.text_area :introduction, autofocus: true, autocomplete: "favorite_brand" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th><%= f.label :プロフィール写真 %><br /></th>
+        <td><%= f.attachment_field :image, autofocus: true, autocomplete: "image" %></td>
+      </div>
+    </tr>
+    <tr>
+      <th><%= f.submit 'プロフィール更新', class:"btn btn-primary" %></th>
+      <td><%= link_to "退会する", user_path(current_user), method: :delete, data: { confirm: "本当に退会しますか?" },class:"btn btn-danger" %></td>
+    </tr>
+     </table>
+    <% end %>
+  </div>
+ </div>
+</div>
+</div>
