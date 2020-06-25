@@ -5,7 +5,6 @@
 
 			 <%= render 'layouts/styling' %> 
 
-			 <li><%= link_to " Logout", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out" %> </li>
 		</div>
 	      <div class="col-xs-9">
 	      	<h2>User's all</h2>
@@ -24,7 +23,9 @@
                 </table>
               </div>
               <% end %>
-              <div align="right"><%= paginate @users %></div>
+              <div class='p-eu__paginate'>
+                <div align="right"><%= paginate @users %></div>
+              </div>
              <h2>Women's</h2>
                <% @users1.each do |user| %>
                <div class="userbox">

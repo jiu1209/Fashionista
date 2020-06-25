@@ -61,13 +61,11 @@
      <tr>
        <div class="actions">
          <th><%= f.submit "新規登録", class:"btn btn-success btn-lg" %></th>
+         <td><h5>登録済みのユーザーはこちらから<%= link_to "ログイン",new_user_session_path %>してください</h5></td>
        </div>
      </tr>
      </table>
     <% end %>
-    <div class="loginmove">
-      <h4>登録済みのユーザーはこちらから<%= link_to "ログイン",new_user_session_path %>してください</h4>
-    </div>
   </div>
  </div>
 </div>

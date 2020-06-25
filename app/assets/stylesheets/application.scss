@@ -13,12 +13,12 @@
  *= require_tree .
  *= require_self
  */
-
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
  * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 table{
@@ -31,14 +31,11 @@ table th,table td{
   padding: 20px 0;
   text-align: center;
 }
-.loginmove{
-	padding: 60px;
-}
 tr .none{
  background-color: transparent;
 }
 .indextot {
-  margin: 100px;
+  margin: 130px;
 }
 .userbox {
   display: inline-flex;
@@ -49,4 +46,98 @@ tr .none{
 .image{
    border-radius: 50%; 
    object-fit: cover;
+}
+.navheadline {
+  margin-left: 50px;
+   background-image: url("/images/image0.jpg");
+}
+.navline {
+  margin-right: 50px;
+}
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin-bottom: 5em;
+}
+footer {
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  background: #222222;
+}
+footer .copyright {
+  float: left;
+  width: 50%;
+}
+footer .copyright p {
+  font-size: 0.7em;
+  line-height: 70px;
+  padding-left: 10%;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+footer .sns {
+  float: right;
+  width: 50%;
+}
+footer .sns a {
+  font-weight: bold;
+  line-height: 70px;
+  float: left;
+  -webkit-transition: all, 0.3s;
+          transition: all, 0.3s;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+footer .sns a:hover {
+  -webkit-transition: all, 0.3s;
+          transition: all, 0.3s;
+  background-color: #222222;
+}
+footer .sns .insta {
+  font-size: 1.2em;
+  width: 20%;
+  background-color: #e4405f;
+}
+footer .sns .fb {
+  font-size: 1.2em;
+  width: 20%;
+  background-color: #3b5999;
+}
+footer .sns .tw {
+  font-size: 1.2em;
+  width: 20%;
+  background-color: #55acee;
+}
+footer .sns .contact {
+  font-size: 0.8em;
+  width: 40%;
+  background-color: #26C6DA;
+}
+@media (max-width: 480px) {
+  .contents {
+    margin-bottom: 200px;
+  }
+  footer {
+    height: auto;
+  }
+  footer .copyright {
+    width: 100%;
+  }
+  footer .copyright p {
+    padding: 0;
+    text-align: center;
+  }
+  footer .sns {
+    width: 100%;
+  }
 }
