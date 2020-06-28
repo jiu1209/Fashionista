@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
    resources :users, only: [:show,:update,:edit,:index,:destroy]
+   get "styilings/index_list" => "styilings#index_list"
+   get "styilings/:id/index" => "styilings#index", as: "styilings_index"
    resources :styilings
 end

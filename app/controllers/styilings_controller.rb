@@ -1,8 +1,16 @@
 class StyilingsController < ApplicationController
+
+   def index_list
+       @styilings = Styiling.all.page(params[:page]).per(8).reverse_order
+       @styilings1 = Styiling.where(gender:"男性").page(params[:page]).per(8).reverse_order
+       @styilings2 = Styiling.where(gender:"女性").page(params[:page]).per(8).reverse_order
+   end
+
    def index
    	   @styilings = Styiling.all.page(params[:page]).per(8).reverse_order
    	   @styilings1 = Styiling.where(gender:"男性").page(params[:page]).per(8).reverse_order
    	   @styilings2 = Styiling.where(gender:"女性").page(params[:page]).per(8).reverse_order
+       @user = User.find(params[:id]) 
    end
 
    def show
@@ -20,7 +28,7 @@ class StyilingsController < ApplicationController
    end
    
    def new
-   	    @styiling = Styiling.new(user_id: params[:user_id])
+   	    @styiling = Styiling.new
    end
 
    def create

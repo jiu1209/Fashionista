@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		@styilings = @user.styilings
+		@styilings = @user.styilings.page(params[:page]).per(4).reverse_order
 	end
 
 	def edit
