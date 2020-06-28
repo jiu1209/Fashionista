@@ -5,39 +5,40 @@
      <h3>プロフィール登録</h3>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
-　　 <table>
+　　 <table align="center">
     <tr>
       <div class="field">
         <th><%= f.label :ユーザー名 %><br /></th>
-        <td><%= f.text_field :name, autofocus: true, autocomplete: "name" %></td>
+        <td><%= f.text_field :name, autofocus: true, autocomplete: "name", size: "30" %></td>
       </div>
     </tr>
 
     <tr>
       <div class="field">
         <th><%= f.label :メールアドレス %><br /></th>
-        <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+        <td><%= f.email_field :email, autofocus: true, autocomplete: "email", size: "30" %></td>
       </div>
     </tr>
     
     <tr>
       <div class="field">
-        <th><%= f.label :性別 %> (男性or女性)<br /></th>
-        <td><%= f.text_field :gender, autofocus: true, autocomplete: "gender" %></td>
+        <th><%= f.label :性別 %><br /></th>
+        <td><%= f.radio_button :gender, "男性",  {value: :male, style: "display: inline-block;"} %> 男性 
+         　　<%= f.radio_button :gender, "女性",  {value: :female, style: "display: inline-block;"} %> 女性</td>
       </div>
     </tr>
     
     <tr>
       <div class="field">
         <th><%= f.label :身長 %><br /></th>
-        <td><%= f.text_field :height, autofocus: true, autocomplete: "height" %></td>
+        <td><%= f.text_field :height, autofocus: true, autocomplete: "height", size: "30" %></td>
       </div>
     </tr>
     
     <tr>
       <div class="field">
         <th><%= f.label :好きなブランド %><br /></th>
-        <td><%= f.text_field :favorite_brand, autofocus: true, autocomplete: "favorite_brand" %></td>
+        <td><%= f.text_field :favorite_brand, autofocus: true, autocomplete: "favorite_brand", size: "30" %></td>
       </div>
     </tr>
  
@@ -48,14 +49,14 @@
             <em>(<%= @minimum_password_length %>文字以上)</em>
             <% end %><br />
         </th>
-        <td><%= f.password_field :password, autocomplete: "new-password" %></td>
+        <td><%= f.password_field :password, autocomplete: "new-password", size: "30" %></td>
       </div>
     </tr>
 
     <tr>
       <div class="field">
         <th><%= f.label :パスワード %> (確認用)<br /></th>
-        <td><%= f.password_field :password_confirmation, autocomplete: "new-password" %></td>
+        <td><%= f.password_field :password_confirmation, autocomplete: "new-password", size: "30" %></td>
       </div>
     </tr>
      <tr>

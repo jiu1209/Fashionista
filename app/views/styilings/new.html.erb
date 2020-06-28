@@ -1,0 +1,128 @@
+<div class="indextot">
+<div class="container"> 
+  <div class="row"> 
+    <div class="col-xs-12">
+     <h3>スタイリング登録</h3>
+    <%= form_for @styiling do |f| %>
+    <%= f.hidden_field :user_id %>
+　　 <table>
+    <tr>
+      <div class="field">
+        <th><%= f.label :性別 %><br /></th>
+        <td><%= f.radio_button :gender, "男性",  {value: :male, style: "display: inline-block;"} %> 男性 
+         　　<%= f.radio_button :gender, "女性",  {value: :female, style: "display: inline-block;"} %> 女性</td>
+      </div>
+    </tr>
+    
+    <tr>
+      <div class="field">
+        <th><%= f.label :スタイリング写真 %><br /></th>
+        <td><%= f.attachment_field :styling_image, autofocus: true, autocomplete: "styling_image" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th><%= f.label :オススメポイント %><br /></th>
+        <td><%= f.text_area :detail, autofocus: true, autocomplete: "detail" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th>アイテム名 / ブランド名<br /></th>
+        <td><%= f.text_field :item_one, autofocus: true, autocomplete: "item_one" %></td>
+      </div>
+    
+      <div class="field">
+        <td><%= f.text_field :brand_one, autofocus: true, autocomplete: "brand_one" %></td>
+      </div>
+    </tr>
+    
+    <tr>
+      <div class="field">
+        <th>アイテム名 / ブランド名<br /></th>
+        <td><%= f.text_field :item_two, autofocus: true, autocomplete: "item_two" %></td>
+      </div>
+    
+      <div class="field">
+        <td><%= f.text_field :brand_two, autofocus: true, autocomplete: "brand_two" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th>アイテム名 / ブランド名<br /></th>
+        <td><%= f.text_field :item_three, autofocus: true, autocomplete: "item_three" %></td>
+      </div>
+    
+      <div class="field">
+        <td><%= f.text_field :brand_three, autofocus: true, autocomplete: "brand_three" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th>アイテム名 / ブランド名<br /></th>
+        <td><%= f.text_field :item_four, autofocus: true, autocomplete: "item_four" %></td>
+      </div>
+    
+      <div class="field">
+        <td><%= f.text_field :brand_four, autofocus: true, autocomplete: "brand_four" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th>アイテム名 / ブランド名<br /></th>
+        <td><%= f.text_field :item_five, autofocus: true, autocomplete: "item_five" %></td>
+      </div>
+    
+      <div class="field">
+        <td><%= f.text_field :brand_five, autofocus: true, autocomplete: "brand_five" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th>アイテム名 / ブランド名<br /></th>
+        <td><%= f.text_field :item_six, autofocus: true, autocomplete: "item_six" %></td>
+      </div>
+    
+      <div class="field">
+        <td><%= f.text_field :brand_six, autofocus: true, autocomplete: "brand_six" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th>アイテム名 / ブランド名<br /></th>
+        <td><%= f.text_field :item_seven, autofocus: true, autocomplete: "item_seven" %></td>
+      </div>
+    
+      <div class="field">
+        <td><%= f.text_field :brand_seven, autofocus: true, autocomplete: "brand_seven" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th>アイテム名 / ブランド名<br /></th>
+        <td><%= f.text_field :item_eight, autofocus: true, autocomplete: "item_eight" %></td>
+      </div>
+    
+      <div class="field">
+        <td><%= f.text_field :brand_eight, autofocus: true, autocomplete: "brand_eight" %></td>
+      </div>
+    </tr>
+     <tr>
+       <div class="actions">
+         <th><%= f.submit "スタイリングを投稿する", class:"btn btn-success btn-lg" %></th>
+       </div>
+     </tr>
+     </table>
+    <% end %>
+  </div>
+ </div>
+</div>
+</div>

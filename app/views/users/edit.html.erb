@@ -19,10 +19,11 @@
       </div>
     </tr>
     
-    <tr>
+     <tr>
       <div class="field">
-        <th><%= f.label :性別 %> (男性or女性)<br /></th>
-        <td><%= f.text_field :gender, autofocus: true, autocomplete: "gender" %></td>
+        <th><%= f.label :性別 %><br /></th>
+        <td><%= f.radio_button :gender, "男性",  {value: :male, style: "display: inline-block;"} %> 男性 
+         　　<%= f.radio_button :gender, "女性",  {value: :female, style: "display: inline-block;"} %> 女性</td>
       </div>
     </tr>
     

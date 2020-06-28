@@ -2,13 +2,14 @@ class UsersController < ApplicationController
 	 before_action :logged_in_user, only: [:edit, :update]
 
 	def index
-		@users =User.all.page(params[:page]).per(4).reverse_order
-		@users1 = User.where(gender:"女性").page(params[:page]).per(4).reverse_order
-		@users2 = User.where(gender:"男性").page(params[:page]).per(4).reverse_order
+		@users =User.all.page(params[:page]).per(8).reverse_order
+		@users1 = User.where(gender:"女性").page(params[:page]).per(8).reverse_order
+		@users2 = User.where(gender:"男性").page(params[:page]).per(8).reverse_order
 	end
 
 	def show
 		@user = User.find(params[:id])
+		@styilings = @user.styilings
 	end
 
 	def edit

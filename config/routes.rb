@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
-   resources :users, only: [:show,:update,:edit,:index,:destroy]  
+   resources :users, only: [:show,:update,:edit,:index,:destroy]
+   resources :styilings
 end
