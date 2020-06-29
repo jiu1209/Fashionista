@@ -35,16 +35,22 @@ tr .none{
  background-color: transparent;
 }
 .indextot {
-  margin: 140px;
+   margin: 140px;
 }
 .userbox {
   display: inline-flex;
+  margin-right: 8px;
 }
 .userindex {
   margin:  20px;
 }
 .image{
    object-fit: cover;
+   border-radius: 50%;
+}
+.styling_image{
+   object-fit: cover;
+   border-radius: 5%;
 }
 .navheadline {
   margin-left: 50px;

@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_28_071030) do
+ActiveRecord::Schema.define(version: 2020_06_29_075321) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "styiling_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "styiling_comments", force: :cascade do |t|
+    t.text "comment"
+    t.integer "user_id"
+    t.integer "styiling_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "styilings", force: :cascade do |t|
     t.integer "user_id"

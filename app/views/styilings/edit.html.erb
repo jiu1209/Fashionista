@@ -2,7 +2,7 @@
 <div class="container"> 
   <div class="row"> 
     <div class="col-xs-12">
-     <h3>スタイリング登録</h3>
+     <h3>スタイリング編集</h3>
     <%= form_for @styiling do |f| %>
 　　 <table>
     <tr>
@@ -26,6 +26,7 @@
         <td><%= f.text_area :detail, autofocus: true, autocomplete: "detail" %></td>
       </div>
     </tr>
+
     <tr>
       <div class="field">
         <th>アイテム名 / ブランド名 (1)<br /></th>
@@ -115,8 +116,9 @@
     </tr>
      <tr>
        <div class="actions">
-         <th><%= f.submit "スタイリングを投稿する", class:"btn btn-success btn-lg" %></th>
+         <th><%= f.submit "スタイリングを編集する", class:"btn btn-success btn-lg" %></th>
        </div>
+        <td><%= link_to "スタイリングを削除する", styiling_path(@styiling.id), method: :delete, data: { confirm: "本当に削除しますか?" },class:"btn btn-danger" %></td>
      </tr>
      </table>
     <% end %>

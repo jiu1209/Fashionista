@@ -7,5 +7,8 @@ Rails.application.routes.draw do
    resources :users, only: [:show,:update,:edit,:index,:destroy]
    get "styilings/index_list" => "styilings#index_list"
    get "styilings/:id/index" => "styilings#index", as: "styilings_index"
-   resources :styilings
+   resources :styilings do
+   resource :favorites, only: [:create, :destroy]
+   resources :styiling_comments, only: [:create, :destroy]
+  end
 end

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-	 before_action :logged_in_user, only: [:edit, :update]
+	 before_action :authenticate_user!, only: [:show,:edit,:update]
+	 before_action :logged_in_user, only: [:edit]
 
 	def index
 		@users =User.all.page(params[:page]).per(8).reverse_order
@@ -9,7 +10,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		@styilings = @user.styilings.page(params[:page]).per(4).reverse_order
+		@styilings = @user.styilings.page(params[:page]).per(8).reverse_order
 	end
 
 	def edit

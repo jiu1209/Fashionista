@@ -1,45 +1,100 @@
 <div class="indextot">
   <div class= "container">
 	  <div class="row">	
-		  <div class="col-xs-12">
-        <h2>Styling Details</h2>
-          <div class="col-xs-3">
+        <div class="col-xs-5">
+          <table>
             <tr>
-              <td><%= attachment_image_tag @user, :image, format: "jpeg", fallback:"no_image.jpg", size: "250x250" %></td>
-          </div>
-          <div class="col-xs-5">
-            <h2><%= @user.name %></h2>
-            <td><%= @user.height %> | <%= @user.gender %> | <%= @user.favorite_brand %></td>
+              <th><%= link_to attachment_image_tag(@user, :image, format: "jpeg", fallback:"no_image.jpg", size: "100x100"),user_path(@user.id)%></th>
+              <td><h4><%=  @user.name %></h4><%= @user.height %> | <%= @user.gender %> | <%= @user.favorite_brand %></td>
             </tr>
-            </br>
-            </br>
-            <tr>
-	            <td><%= @user.introduction %></td>
-            </tr>
-            </br> 
-            </br> 
-            </br> 
-            </br> 
-             <% if user_signed_in? && current_user.id == @user.id %>
             <tr> 
-              <th><%= link_to "編集ページへ", edit_user_path, class: "btn btn-primary btn-md", role: "botton" %></th>
-              <td><%= link_to "スタイリングを投稿する", new_styiling_path, class: "btn btn-success btn-md", role: "botton" %></td>
+              <th><%= link_to "フォローする", edit_user_path, class: "btn btn-primary btn-xs", role: "botton" %></th>
             </tr>
-            <% end %> 
-  　　　   </div>
-          <div class="col-xs-12">
+          </table>
+        </div>
+            <th><h2>Point's</h2></th>
+              <td><%= @styiling.detail %></td>
+            </br>
+            </br>
+            </br>
+          <% if user_signed_in? && current_user.id == @user.id %>
+            <tr> 
+              <th><%= link_to "スタイリングを編集する", edit_styiling_path, class: "btn btn-success ", role: "botton" %></th>
+            </tr>
+          <% end %>
             </br> 
             </br>
-            <h3><%= @user.name %>さんのスタイリング</h3>
-               <div class="userbox">
-                <table>
-                  <tr>
-                    <td><%= attachment_image_tag @Styiling, :styling_image, format: "jpeg", size: "250x300" %></td>
+          <div class="col-xs-12">
+            <h1>Styling Details</h1>
+              <div class="col-xs-5">
+                <tr>
+                  <th><%= attachment_image_tag @styiling, :styling_image, format: "jpeg", size: "450x580" %></th>
+                </tr>
+                <tr>
+                    <% if @styiling.favorited_by?(current_user) %>
+                    <td>
+                       <%= link_to styiling_favorites_path(@styiling.id), method: :delete do %>
+                       <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
+                       <%= @styiling.favorites.count %>いいね
+                    </td>
+                    <% end %>
+                    <% else %>
+                    <td>
+                      <%= link_to styiling_favorites_path(@styiling.id), method: :post do %>
+                      <i class="fa fa-heart" aria-hidden="true"></i>
+                      <%= @styiling.favorites.count %>いいね</td>
                   </tr>
+                 <% end %>
+               <% end %>
+               <% @styiling.styiling_comments.each do |styiling_comment| %>
+               <table>
+                 <tr>
+                   <td><%= styiling_comment.user.name %> | <%= styiling_comment.created_at.strftime('%Y/%m/%d') %> 　　 <%= styiling_comment.comment %></td>
+                   <% if styiling_comment.user == current_user%>
+                   <td><%= link_to "削除", styiling_styiling_comment_path(styiling_comment.styiling, styiling_comment), method: :delete, class: "btn btn-danger btn-xs" %></td>
+                   <% end %>
+                 </tr>
                 </table>
+               <% end %>
+               <%= form_for [@styiling,@styiling_comment] do |f| %>
+                   <div class="row">
+                     <div class="col-sm-12">
+                       <%= f.text_area :comment, rows:'4', class: "form-control",placeholder: "コメント欄です" %>
+                     </div>
+                   </div>
+                   <%= f.submit "送信する", class: "btn btn-base-1 mt-20 pull-right" %>
+                <% end %>
+              </div>
+              <div class="col-xs-7">
+                <h2>Item's</h2>
+                  <table>
+                    <tr>
+                      <td><%= @styiling.item_one %></td><td><%= @styiling.brand_one %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_two %></td><td><%= @styiling.brand_two %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_three %></td><td><%= @styiling.brand_three %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_four %></td><td><%= @styiling.brand_four %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_five %></td><td><%= @styiling.brand_five %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_six %></td><td><%= @styiling.brand_six %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_seven %></td><td><%= @styiling.brand_seven %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_eight %></td><td><%= @styiling.brand_eight %></td>
+                    </tr>
+                  </table>  
               </div>
           </div>
-    </div>
+      </div>
   </div>
-</div>
 </div>
