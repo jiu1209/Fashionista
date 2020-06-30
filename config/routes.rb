@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+root :to => "homes#top"
  devise_for :users,controllers: {
     sessions: 'users/sessions',
     passwords: 'users/passwords',
@@ -11,4 +12,6 @@ Rails.application.routes.draw do
    resource :favorites, only: [:create, :destroy]
    resources :styiling_comments, only: [:create, :destroy]
   end
+  get "homes/about" => "homes#about"
+  get "homes/top" => "homes#top"
 end

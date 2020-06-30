@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   	case resource
   	
   	when @user
-  		user_path(current_user.id)
+  		root_path
   	end
   end
 
@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     case resource
   
     when :user
-      new_user_session_path
+      root_path
     end
   end
 

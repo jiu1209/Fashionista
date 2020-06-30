@@ -1,0 +1,19 @@
+// Place all the styles related to the Homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.slide{
+	height: 100%;
+	width: 100%;
+	object-fit: cover; 
+	object-position: 100% 100%;
+}
+#back {
+  right: 20px;
+  bottom: 20px;
+}
+ 
+#back img {
+	height: 130px;
+	width: 50px;
+	padding-bottom: 80px;
+}
