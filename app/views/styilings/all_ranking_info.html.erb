@@ -31,20 +31,34 @@
      <script src="https://kit.fontawesome.com/f4a34d9917.js" crossorigin="anonymous"></script>
 
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  </head>
-<h2>Forgot your password?</h2>
+</head>
+<div class="indextot">
+  <div class= "container">
+	<div class="row">	
+		<div class="col-xs-3">
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+			 <%= render 'layouts/styling_info' %> 
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+		</div>
+	      <div class="col-xs-9">
+	      	<h2>Ranking All </h2>
+	      	  <% @all_ranks.each.with_index(1) do |styiling, i| %>
+               <div class="userbox">
+                <table>
+              	  <tr>
+                    <td><%= link_to attachment_image_tag(styiling, :styling_image, format: "jpeg", size: "250x330"), styiling_path(styiling.id) %>
+                   <tr>
+                  	<td><i class="fas fa-chess-queen"></i> 第<%= i %>位</td>
+                  </tr>
+                  </tr>
+                  <tr>
+                    <td><%= link_to attachment_image_tag(styiling.user, :image, format: "jpeg", size: "30x30"),user_path(  styiling.user.id) %>
+                        <%= link_to styiling.user.name, user_path(styiling.user.id) %> | <%= styiling.user.height %></td>
+                  </tr>
+                </table>
+              </div>
+           <% end %>
+        </div>
+     </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

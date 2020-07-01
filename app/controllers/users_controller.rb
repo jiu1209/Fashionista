@@ -2,10 +2,28 @@ class UsersController < ApplicationController
 	 before_action :authenticate_user!, only: [:show,:edit,:update]
 	 before_action :logged_in_user, only: [:edit]
 
+    def women_index
+    	@users = User.where(gender:"女性").page(params[:page]).per(20).reverse_order
+    end
+
+    def women_index_info
+    	@users = User.where(gender:"女性").page(params[:page]).per(20).reverse_order
+    end
+
+    def men_index
+    	@users = User.where(gender:"男性").page(params[:page]).per(20).reverse_order
+    end
+
+     def men_index_info
+    	@users = User.where(gender:"男性").page(params[:page]).per(20).reverse_order
+    end
+
+	def index_info
+		@users = User.all.page(params[:page]).per(20).reverse_order
+	end
+
 	def index
-		@users =User.all.page(params[:page]).per(8).reverse_order
-		@users1 = User.where(gender:"女性").page(params[:page]).per(8).reverse_order
-		@users2 = User.where(gender:"男性").page(params[:page]).per(8).reverse_order
+		@users = User.all.page(params[:page]).per(20).reverse_order
 	end
 
 	def show

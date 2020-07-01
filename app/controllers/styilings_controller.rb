@@ -1,17 +1,53 @@
 class StyilingsController < ApplicationController
    before_action :authenticate_user!, only: [:index,:edit,:new,:show]
    before_action :logged_in_user, only: [:edit]
+   
+   def all_ranking
+       @all_ranks = Styiling.find(Favorite.group(:styiling_id).order('count(styiling_id) desc').limit(9).pluck(:styiling_id))
+   end
+
+   def women_ranking
+       @gender_ranks = Styiling.joins(:favorites).where(gender:"女性").group(:styiling_id).order('count(favorites.styiling_id) desc').limit(9)
+   end
+
+    def men_ranking
+       @gender_ranks = Styiling.joins(:favorites).where(gender:"男性").group(:styiling_id).order('count(favorites.styiling_id) desc').limit(9)
+   end
+
+   def women_ranking_info
+        @gender_ranks = Styiling.joins(:favorites).where(gender:"女性").group(:styiling_id).order('count(favorites.styiling_id) desc').limit(9)
+   end
+
+    def men_ranking_info
+        @gender_ranks = Styiling.joins(:favorites).where(gender:"男性").group(:styiling_id).order('count(favorites.styiling_id) desc').limit(9)
+   end
+
+   def all_ranking_info
+       @all_ranks = Styiling.find(Favorite.group(:styiling_id).order('count(styiling_id) desc').limit(9).pluck(:styiling_id))
+   end
+
+   def women_index
+       @styilings = Styiling.where(gender:"女性").page(params[:page]).per(15).reverse_order
+   end
+   
+   def women_index_info
+       @styilings = Styiling.where(gender:"女性").page(params[:page]).per(15).reverse_order
+   end
+
+   def men_index
+       @styilings = Styiling.where(gender:"男性").page(params[:page]).per(15).reverse_order
+   end
+
+   def men_index_info
+       @styilings = Styiling.where(gender:"男性").page(params[:page]).per(15).reverse_order
+   end
 
    def index_list
-       @styilings = Styiling.all.page(params[:page]).per(6).reverse_order
-       @styilings1 = Styiling.where(gender:"男性").page(params[:page]).per(6).reverse_order
-       @styilings2 = Styiling.where(gender:"女性").page(params[:page]).per(6).reverse_order
+       @styilings = Styiling.all.page(params[:page]).per(15).reverse_order
    end
 
    def index
-   	   @styilings = Styiling.all.page(params[:page]).per(6).reverse_order
-   	   @styilings1 = Styiling.where(gender:"男性").page(params[:page]).per(6).reverse_order
-   	   @styilings2 = Styiling.where(gender:"女性").page(params[:page]).per(6).reverse_order
+   	   @styilings = Styiling.all.page(params[:page]).per(15).reverse_order
        @user = User.find(params[:id]) 
    end
 

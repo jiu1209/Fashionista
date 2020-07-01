@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   	case resource
   	
   	when @user
-  		root_path
+  		homes_top_info_path
   	end
   end
 

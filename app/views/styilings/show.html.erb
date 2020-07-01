@@ -7,8 +7,16 @@
               <th><%= link_to attachment_image_tag(@user, :image, format: "jpeg", fallback:"no_image.jpg", size: "100x100"),user_path(@user.id)%></th>
               <td><h4><%=  @user.name %></h4><%= @user.height %> | <%= @user.gender %> | <%= @user.favorite_brand %></td>
             </tr>
-            <tr> 
-              <th><%= link_to "フォローする", edit_user_path, class: "btn btn-primary btn-xs", role: "botton" %></th>
+            <tr>
+             <% if current_user.following?(@user) %>
+                 <div align="left"><th><%= link_to 'フォロー外す', unfollow_path(@user.id), class: 'btn btn-primary btn-sm ', method: :POST %></th></div>
+              <% else %>
+                 <div align="left"><th><%= link_to 'フォローする', follow_path(@user.id), class: 'btn btn-primary  btn-sm  ', method: :POST %></th></div>
+              <% end %>
+            </tr>
+            <tr>
+              <div align="left"><td>フォロー : <%= link_to @user.follower.count,  user_follows_path(@user.id) %></td>
+                 <td>フォロワー : <%= link_to @user.followed.count,  user_followers_path(@user.id) %></td></div>
             </tr>
           </table>
         </div>
