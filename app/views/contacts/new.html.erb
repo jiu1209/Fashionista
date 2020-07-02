@@ -1,0 +1,41 @@
+<div class="indextot">
+  <div class="container"> 
+    <div class="row"> 
+      <div class="col-xs-6">
+        <%= form_for(@contact, url:contacts_create_path(@contact), html: {method: "post"})do |f| %>
+       
+          <h2>＊ お問い合わせ</h2>
+          </br>
+          <div class="form-group">
+            <%= f.label :email, '返信先メールアドレス' %>
+            <%= f.text_field :email, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :message, 'お問い合わせ内容' %>
+            <%= f.text_area :message, size: '10x10', class: 'form-control' %>
+          </div>
+
+          <%= f.submit '送信', class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <div class="col-xs-6">
+      	<h2>＊ よくある質問</h2>
+        </br>
+      	  <h4>会員登録すると何ができますか？</h4>
+      	  <P>Fashionistaに登録すると、参考にしたいコーディネイトやアイテムを見つけることや、</br>
+           実際に持っているアイテムを、登録できるクローゼット機能が使えます。</br>お気に入りのユーザーをフォローしたり、コメントやいいねもすることができます。</P>
+        </br>
+        <h4>商品の在庫や再入荷があるか教えて下さい？</h4>
+          <p>Fashionistaでは商品の販売はしていないので、在庫確認や再入荷の確認ができません。</br>各販売店まで直接お問い合わせしてください。</p>
+        </br>
+        <h4>メールアドレスの変更をしたいです？</h4>
+          <p>メールアドレスの変更はログインしてプロフィール変更から行えます。</p>
+        </br>
+        <h4>退会するにはどうしたらいいですか？</h4>
+          <p>一度退会されると同じアカウントは再度ご利用できません。</br>
+             退会の手続きはプロフィール変更から行えます。</p>
+         </div>
+      </div>
+  </div>
+</div>

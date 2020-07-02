@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-       <%= render 'layouts/header' %> 
+       <%= render 'layouts/header' %>
   </head>
   <body style="background-color:#eee; color:black;">
       <%= yield %>
-       <span id="back">
+       <%= render 'layouts/footer' %> 
+        <span id="back">
       <a href="#">
         <div align="right"><img src="/assets/arrow.png" alt=""></div>
       </a>
       <div class="backline">
       </div>
-       <%= render 'layouts/footer' %> 
   </body> 
 </html>

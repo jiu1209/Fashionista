@@ -34,4 +34,12 @@ root :to => "homes#top"
   post 'unfollow/:id' => 'relationships#unfollow', as: 'unfollow'
   get "relationship/:user_id/follows" => "relationships#follows", as:'user_follows'
   get "relationship/:user_id/followers" => "relationships#followers", as:'user_followers'
+  get '/search' => 'search#search'
+  get '/search_info' => 'search#search_info'
+  get 'contacts/new' => "contacts#new"
+  post 'contacts/create' => "contacts#create"
+
+  if Rails.env.development?
+  mount LetterOpenerWeb::Engine, at: '/letter_opener'
+  end
 end

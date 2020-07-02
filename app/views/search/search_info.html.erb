@@ -1,0 +1,55 @@
+<div class="indextot">
+  <div class= "container">
+	<div class="row">	
+		<div class="col-xs-3">
+
+			 <%= render 'layouts/styling_info' %> 
+
+		</div>
+	      <div class="col-xs-9">
+           <div align="right"><%= render 'layouts/search_info' %></div>
+          <%if @model == 'user' %>
+	      	<h2>User's</h2>
+	      	  <% @datas.each do |user| %>
+               <div class="userbox">
+                <table>
+              	  <tr>
+                    <td><%=link_to attachment_image_tag(user, :image, format: "jpeg", fallback:"no_image.jpg", size: "200x200"), user_path(user.id) %></td>
+                  </tr>
+                  <tr>
+                    <td><%= link_to user.name, user_path(user.id) %>　　
+                  </tr>
+                  <tr>
+                    <td><%= user.height %> | <%= user.gender %> | <%= user.favorite_brand %></td>
+                  </tr>
+                </table>
+              </div>
+              <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+<% end %> 
+<% if @model == "styiling" %>
+          <h2>Styling's</h2>
+            <%  @datas.each do |styiling| %>
+               <div class="userbox">
+                <table>
+                  <tr>
+                    <td><%= link_to attachment_image_tag(styiling, :styling_image, format: "jpeg", size: "250x330"), styiling_path(styiling.id) %>
+                      <div align="center"><%= styiling.created_at.strftime('%Y/%m/%d')%></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><%= link_to attachment_image_tag(styiling.user, :image, format: "jpeg", size: "30x30"),user_path(  styiling.user.id) %>
+                        <%= link_to styiling.user.name, user_path(styiling.user.id) %> | <%= styiling.user.height %></td>
+                  </tr>
+                </table>
+              </div>
+           <% end %>
+           </div>
+        </div>
+　　　</div>
+   </div>
+　</div>
+<% end %>
