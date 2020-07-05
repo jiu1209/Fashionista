@@ -16,7 +16,7 @@
      <% else %>
         <li><%= link_to ' Styling', styilings_index_list_path, class: "glyphicon glyphicon-asterisk" %></li>
         <li><%= link_to ' Users', user_index_info_path, class: "glyphicon glyphicon-user" %></li>
-        <li><%= link_to ' About', homes_about_path, class: "glyphicon glyphicon-asterisk" %></li>
+        <li><%= link_to ' About', homes_about_path, class: "glyphicon glyphicon-scale" %></li>
         <li><%= link_to ' Sign up', new_user_registration_path, class: "glyphicon glyphicon-edit" %></li>
         <li><%= link_to ' Login', new_user_session_path, class: "glyphicon glyphicon-log-in" %></li>
      <% end %>
@@ -41,7 +41,6 @@
 
 		</div>
 	      <div class="col-xs-9">
-           <div align="right"><%= render 'layouts/search_info' %></div>
 	      	<h2>Women's Styling</h2>
 	      	  <%  @styilings.each do |styiling| %>
                <div class="userbox">

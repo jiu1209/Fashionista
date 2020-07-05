@@ -91,6 +91,10 @@ class StyilingsController < ApplicationController
     	:item_seven,:item_eight,:brand_one,:brand_two,:brand_three,:brand_four,:brand_five,:brand_six,:brand_seven,:brand_eight,:gender, :user_id )
    end
 
+   def bookmarks
+    @styilings = current_user.bookmark_boards.includes(:user).recent
+   end
+
     def logged_in_user
        @styiling = Styiling.find(params[:id])
     if @styiling.user.id != current_user.id

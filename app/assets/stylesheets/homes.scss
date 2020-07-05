@@ -1,16 +1,7 @@
 // Place all the styles related to the Homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.swiper-container {
-	width: 100%;
-	height: 370px;
-}
-.swiper-slide {
-	padding-top: 180px; 
-	text-align: center;
-	color: #fff;
-	font-size: 30px;
-}
+
 #back {
   right: 20px;
   bottom: 20px;
@@ -20,4 +11,38 @@
 	height: 130px;
 	width: 50px;
 	padding-bottom: 80px;
+}
+.img-size {
+	width: 850px;
+	height: 500px;
+}
+.img-size1 {
+	width: 500px;
+	height: 600px;
+}
+.img-size2 {
+	width: 250px;
+	height: 300px;
+}
+.border {
+	border: solid 1px;
+}
+.fadeInDown {
+ -webkit-animation-fill-mode:both;
+ -ms-animation-fill-mode:both;
+ animation-fill-mode:both;
+ -webkit-animation-duration:1s;
+ -ms-animation-duration:1s;
+ animation-duration:1s;
+ -webkit-animation-name: fadeInDown;
+ animation-name: fadeInDown;
+ visibility: visible !important;
+}
+@-webkit-keyframes fadeInDown {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@keyframes fadeInDown {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
 }

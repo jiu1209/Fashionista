@@ -33,74 +33,77 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
 <div class="indextot">
-<div class="container"> 
-  <div class="row"> 
-    <div class="col-xs-12">
-     <h2>ユーザー登録</h2>
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
-　　 <table align="center">
-    <tr>
-      <div class="field">
-        <th><%= f.label :ユーザー名 %><br /></th>
-        <td><%= f.text_field :name, autofocus: true, autocomplete: "name", size: "30" %></td>
-      </div>
-    </tr>
+  <div class="container"> 
+    <div class="row"> 
+     <div class="col-xs-12">
+     <h3>　　　　　　　　　　　新規登録</h3>
+     <div align="center">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+　　    <table align="center">
+         <tr>
+           <div class="field">
+             <th><%= f.label :ユーザー名 %><br /></th>
+             <td><%= f.text_field :name, autofocus: true, autocomplete: "name", size: "50" %></td>
+           </div>
+         </tr>
 
-    <tr>
-      <div class="field">
-        <th><%= f.label :メールアドレス %><br /></th>
-        <td><%= f.email_field :email, autofocus: true, autocomplete: "email", size: "30" %></td>
-      </div>
-    </tr>
+         <tr>
+           <div class="field">
+             <th><%= f.label :メールアドレス %><br /></th>
+             <td><%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50" %></td>
+           </div>
+         </tr>
     
-    <tr>
-      <div class="field">
-        <th><%= f.label :性別 %><br /></th>
-        <td><%= f.radio_button :gender, "男性",  {value: :male, style: "display: inline-block;"} %> 男性 
+         <tr>
+           <div class="field">
+             <th><%= f.label :性別 %><br /></th>
+             <td><%= f.radio_button :gender, "男性",  {value: :male, style: "display: inline-block;"} %> 男性 
          　　<%= f.radio_button :gender, "女性",  {value: :female, style: "display: inline-block;"} %> 女性</td>
-      </div>
-    </tr>
+           </div>
+         </tr>
     
-    <tr>
-      <div class="field">
-        <th><%= f.label :身長 %><br /></th>
-        <td><%= f.text_field :height, autofocus: true, autocomplete: "height", size: "30" %></td>
-      </div>
-    </tr>
+         <tr>
+          <div class="field">
+            <th><%= f.label :身長 %><br /></th>
+            <td><%= f.text_field :height, autofocus: true, autocomplete: "height", size: "50" %></td>
+          </div>
+         </tr>
     
-    <tr>
-      <div class="field">
-        <th><%= f.label :好きなブランド %><br /></th>
-        <td><%= f.text_field :favorite_brand, autofocus: true, autocomplete: "favorite_brand", size: "30" %></td>
-      </div>
-    </tr>
+         <tr>
+           <div class="field">
+             <th><%= f.label :好きなブランド %><br /></th>
+             <td><%= f.text_field :favorite_brand, autofocus: true, autocomplete: "favorite_brand", size: "50" %></td>
+           </div>
+         </tr>
  
-    <tr> 
-      <div class="field">
-        <th><%= f.label :パスワード %>
-            <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %>文字以上)</em>
-            <% end %><br />
-        </th>
-        <td><%= f.password_field :password, autocomplete: "new-password", size: "30" %></td>
-      </div>
-    </tr>
+         <tr> 
+           <div class="field">
+             <th><%= f.label :パスワード %>
+             <% if @minimum_password_length %>
+             <em>(<%= @minimum_password_length %>文字以上)</em>
+             <% end %><br />
+             </th>
+             <td><%= f.password_field :password, autocomplete: "new-password", size: "50" %></td>
+           </div>
+         </tr>
 
-    <tr>
-      <div class="field">
-        <th><%= f.label :パスワード %> (確認用)<br /></th>
-        <td><%= f.password_field :password_confirmation, autocomplete: "new-password", size: "30" %></td>
-      </div>
-    </tr>
-     <tr>
-       <div class="actions">
-         <th><%= f.submit "新規登録", class:"btn btn-success btn-lg" %></th>
-         <td><h5>登録済みのユーザーはこちらから<%= link_to "ログイン",new_user_session_path %>してください</h5></td>
-       </div>
-     </tr>
-     </table>
-    <% end %>
+         <tr>
+           <div class="field">
+             <th><%= f.label :パスワード %> (確認用)<br /></th>
+             <td><%= f.password_field :password_confirmation, autocomplete: "new-password", size: "50" %></td>
+           </div>
+         </tr>
+
+         <tr>
+           <div class="actions">
+             <th><%= f.submit "登録する", class:"btn btn-success btn-lg" %></th>
+             <td><h5>登録済みのユーザーはこちらから<%= link_to "ログイン",new_user_session_path %>してください</h5></td>
+           </div>
+         </tr>
+        </table>
+      <% end %>
+    </div>
   </div>
  </div>
 </div>

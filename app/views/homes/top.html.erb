@@ -18,7 +18,7 @@
      <% else %>
         <li><%= link_to ' Styling', styilings_index_list_path, class: "glyphicon glyphicon-asterisk" %></li>
         <li><%= link_to ' Users', user_index_info_path, class: "glyphicon glyphicon-user" %></li>
-        <li><%= link_to ' About', homes_about_path, class: "glyphicon glyphicon-asterisk" %></li>
+        <li><%= link_to ' About', homes_about_path, class: "glyphicon glyphicon-scale" %></li>
         <li><%= link_to ' Sign up', new_user_registration_path, class: "glyphicon glyphicon-edit" %></li>
         <li><%= link_to ' Login', new_user_session_path, class: "glyphicon glyphicon-log-in" %></li>
      <% end %>
@@ -35,7 +35,6 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
 
-  </head>
   <body>
     <div class="indextot">
       <div class= "container">
@@ -44,24 +43,16 @@
 	     	 <%= render 'layouts/styling_info' %>
 	     </div>
          <div class="col-xs-9">
-           <div align="right"><%= render 'layouts/search_info' %></div>
          <tr>
-            <div id="test-carousel" class="carousel slide img-size carousel-fade" data-ride="carousel" data-interval="2000">
-  	     　   <div class="carousel-inner">
-		        <div class="item active img-size">
-			      <img class="slides img-size" src="/assets/3_158538-4730.jpeg">
-		        </div>
-		        <div class="item img-size">
-			      <img class="slides img-size"src="/assets/_158538-4893.jpg">
-		        </div>
-		        <div class="item img-size">
-			      <img class="slides img-size"src="/assets/_158538-1337.jpg">
-		        </div>
-		        <div class="item img-size">
-			      <img class="slides img-size"src="/assets/_158538-941.jpg">
-		        </div>
+            <div id="slider">
+              <div id="skippr-slider">
+			          <div style="background-image: url(/assets/3_158538-4730.jpeg)"></div>
+			          <div style="background-image: url(/assets/_158538-4893.jpg)"></div>
+			          <div style="background-image: url(/assets/_158538-1337.jpg)"></div>
+			          <div style="background-image: url(/assets/_158538-941.jpg)"></div>
+              </div>
 	          </div>
-	        </div>
+	       </div>
 	      </tr>
              <h2>Recommendation　Styling</h2>
 	      	 <%  @styilings.each do |styiling| %>
@@ -87,5 +78,22 @@
        </div>
     </div>
     </span>
+      <script src="./js/skippr.js" type="text/javascript"></script>
+        <script>
+      $(document).ready(function(){
+        $("#skippr-slider").skippr({
+         transition: 'slide',
+         autoPlay: true,
+         arrows : false,
+         speed : 1000,
+         autoPlayDuration : 5000,
+         transition: "fade",
+      });
+    });
+</script>
+  <div class="start">
+     <div style="background-image: url(/assets/_158538-941.jpg)"></div>
+     <h1><p>Fashionista</p></h1>
+  </div>
   </body>
 </html>

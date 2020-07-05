@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_02_051248) do
+ActiveRecord::Schema.define(version: 2020_07_05_022117) do
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "styiling_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["styiling_id"], name: "index_bookmarks_on_styiling_id"
+    t.index ["user_id", "styiling_id"], name: "index_bookmarks_on_user_id_and_styiling_id", unique: true
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "email"

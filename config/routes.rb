@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'bookmarks/create'
+  get 'bookmarks/destroy'
 root :to => "homes#top"
  devise_for :users,controllers: {
     sessions: 'users/sessions',
@@ -24,6 +26,7 @@ root :to => "homes#top"
    get "styilings/women_ranking_info" => "styilings#women_ranking_info"
    get "styilings/men_ranking_info" => "styilings#men_ranking_info"
    resources :styilings do
+   resource :bookmarks, only: [:create, :destroy]
    resource :favorites, only: [:create, :destroy]
    resources :styiling_comments, only: [:create, :destroy]
   end
@@ -35,7 +38,6 @@ root :to => "homes#top"
   get "relationship/:user_id/follows" => "relationships#follows", as:'user_follows'
   get "relationship/:user_id/followers" => "relationships#followers", as:'user_followers'
   get '/search' => 'search#search'
-  get '/search_info' => 'search#search_info'
   get 'contacts/new' => "contacts#new"
   post 'contacts/create' => "contacts#create"
 

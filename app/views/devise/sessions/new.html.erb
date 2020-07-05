@@ -32,36 +32,38 @@
 
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
-<div class="indextot">
-<div class="container"> 
-  <div class="row">
-　　<h2>ユーザーログイン</h2>
-　　　　 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <table>
-      <tr>
-  　　   <div class="field">
-           <th><%= f.label :メールアドレス%><br /></th>
-           <td><%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50" %></td>
-        </div>
-      </tr>
+  <div class="indextot">
+    <div class="container"> 
+      <div class="row">
+　    　<h3>　　　　　　　　　　ユーザーログイン</h3>
+　　　　　 <div align="center">
+　　　　   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <table>
+              <tr>
+  　　          <div class="field">
+                  <th><%= f.label :メールアドレス%><br /></th>
+                  <td><%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50" %></td>
+                </div>
+              </tr>
       
-      <tr>
-        <div class="field">
-           <th><%= f.label :パスワード%><br /></th>
-           <td><%= f.password_field :password, autocomplete: "current-password",size: "50"  %>
-             <p align="right"><%=link_to "=> パスワードを忘れた方はこちら", new_user_password_path %></P>
-           </td>
-        </div>
-      </tr>
-      <tr>
-        <div class="actions">
-          <th><%= f.submit "ログイン", class:"btn btn-success" %></th>
-          <td><h5>登録がお済みでない方はこちらから<%= link_to "新規登録",new_user_registration_path %>してください</h5></td>
-        </div>
-      </tr>
-    </table>
-    <% end %>
+              <tr>
+                <div class="field">
+                  <th><%= f.label :パスワード%><br /></th>
+                  <td><%= f.password_field :password, autocomplete: "current-password",size: "50"  %>
+                  <p align="center"><%=link_to "　　　　　　　　　　　=> パスワードを忘れた方はこちら", new_user_password_path %></P></td>
+                </div>
+               </tr>
+
+               <tr>
+                 <div class="actions">
+                   <th><%= f.submit "ログイン", class:"btn btn-success" %></th>
+                   <td><h5>登録がお済みでない方はこちらから<%= link_to "新規登録",new_user_registration_path %>してください</h5></td>
+                 </div>
+              </tr>
+            </table>
+          <% end %>
+         </div>
+      </div>
     </div>
-   </div>
-</div>
+  </div>
 </div>
