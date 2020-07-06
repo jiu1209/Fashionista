@@ -63,13 +63,18 @@ class StyilingsController < ApplicationController
 
    def update
        @styiling = Styiling.find(params[:id])
-       @styiling .update(styiling_params)
+     if@styiling .update(styiling_params)
+       flash[:complete] = "＊ スタイリングを更新しました。"
        redirect_to  styiling_path(@styiling.id)
+     else
+       render "edit"
+     end
    end
 
    def destroy
-    　　styiling = Styiling.find(params[:id])
-    　　styiling.destroy
+       styiling = Styiling.find(params[:id])
+       styiling.destroy
+       flash[:dastory] = "＊ スタイリングを削除しました。"
        redirect_to styilings_index_path(current_user)
    end
    
@@ -80,9 +85,13 @@ class StyilingsController < ApplicationController
    def create
         @styiling = Styiling.new(styiling_params)
         @styiling.user = current_user
-        @styiling.save
+   if   @styiling.save
+        flash[:complete] = "＊ スタイリングを投稿しました。" 
         redirect_to styilings_index_path(current_user)
-   end
+   else
+        render "new"
+    end
+  end
 
    private
 

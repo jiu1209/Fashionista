@@ -5,6 +5,7 @@
      <h2>　　　　Styling New</h2>
     <div align="center">
     <%= form_for @styiling do |f| %>
+    <%= render 'layouts/styiling_error_message', model: f.object %>
 　　 <table>
     <tr>
       <div class="field">
@@ -24,7 +25,7 @@
     <tr>
       <div class="field">
         <th><%= f.label :オススメポイント %><br /></th>
-        <td><%= f.text_area :detail, autofocus: true, autocomplete: "detail" %></td>
+        <td><%= f.text_area :detail, autofocus: true, autocomplete: "detail"%></td>
       </div>
     </tr>
     <tr>

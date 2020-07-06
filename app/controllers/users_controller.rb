@@ -42,15 +42,19 @@ class UsersController < ApplicationController
 
 	def update
 		@user = User.find(params[:id])
-		@user.update(user_params)
+	if  @user.update(user_params)
+        flash[:complete] = "プロフィール情報を更新しました。" 
 		redirect_to user_path(@user.id)
+    else
+        render "edit"
+     end
 	end
 
 	def destroy
         @user = User.find(params[:id])
         @user.destroy
-        flash[:success] = 'ユーザーを削除しました。'
-        redirect_to new_user_registration_path
+        flash[:dastroy] = 'ユーザーを削除しました。'
+        redirect_to new_user_session_path
     end
 
 	private

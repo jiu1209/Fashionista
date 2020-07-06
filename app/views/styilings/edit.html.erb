@@ -5,6 +5,7 @@
      <h2>　　　　Styling Edit</h2>
      <div align="center">
     <%= form_for @styiling do |f| %>
+     <%= render 'layouts/styiling_error_message', model: f.object %>
 　　 <table>
     <tr>
       <div class="field">

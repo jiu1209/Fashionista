@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: "名前"
+        gender: "性別"
+        height: "身長"
+        password: "パスワード"
+        password_confirmation: "確認用パスワード"
+        current_password: "旧パスワード"
+        email: "メールアドレス"
+      styiling:
+        styling_image: "プロフィール写真"
+        detail: "オススメポイント"
+        gender: "性別"
+        item_one: "アイテム名(1)"
+        brand_one: "ブランド名(1)"

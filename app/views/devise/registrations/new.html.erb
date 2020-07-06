@@ -36,30 +36,55 @@
   <div class="container"> 
     <div class="row"> 
      <div class="col-xs-12">
-     <h3>　　　　　　　　　　　新規登録</h3>
+     <h2>　　　　Sign Up</h2>
      <div align="center">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+        <% if resource.errors.include?(:name) %>
+          <p style="color: red;"><%= resource.errors.full_messages_for(:name).first %></p>
+        <% end %>
+
+       <% if resource.errors.include?(:email) %>
+          <p style="color: red;"><%= resource.errors.full_messages_for(:email).first %></p>
+       <% end %>
+
+       <% if resource.errors.include?(:gender) %>
+          <p style="color: red;"><%= resource.errors.full_messages_for(:gender).first %></p>
+       <% end %>
+
+       <% if resource.errors.include?(:height) %>
+          <p style="color: red;"><%= resource.errors.full_messages_for(:height).first %></p>
+       <% end %>
+
+       <% if resource.errors.include?(:password) %>
+          <p style="color: red;"><%= resource.errors.full_messages_for(:password).first %></p>
+       <% end %>
+
+       <% if resource.errors.include?(:password_confirmation) %>
+          <p style="color: red;"><%= resource.errors.full_messages_for(:password_confirmation).first %></p>
+       <% end %>
+
 　　    <table align="center">
          <tr>
            <div class="field">
              <th><%= f.label :ユーザー名 %><br /></th>
-             <td><%= f.text_field :name, autofocus: true, autocomplete: "name", size: "50" %></td>
+               <td><%= f.text_field :name, autofocus: true, autocomplete: "name", size: "50" %>
+              </td>
            </div>
          </tr>
 
          <tr>
            <div class="field">
              <th><%= f.label :メールアドレス %><br /></th>
-             <td><%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50" %></td>
+               <td><%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50" %></td>
            </div>
          </tr>
     
          <tr>
            <div class="field">
              <th><%= f.label :性別 %><br /></th>
-             <td><%= f.radio_button :gender, "男性",  {value: :male, style: "display: inline-block;"} %> 男性 
-         　　<%= f.radio_button :gender, "女性",  {value: :female, style: "display: inline-block;"} %> 女性</td>
+             <td><%= f.radio_button :gender, "男性",  {value: :male, style: "display: inline-block;"} %> 男性
+         　　    <%= f.radio_button :gender, "女性",  {value: :female, style: "display: inline-block;"} %> 女性</td>
+             </td>
            </div>
          </tr>
     

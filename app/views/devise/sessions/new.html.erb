@@ -35,9 +35,11 @@
   <div class="indextot">
     <div class="container"> 
       <div class="row">
-　    　<h3>　　　　　　　　　　ユーザーログイン</h3>
+        <p style="color: red;"><%= flash[:dastroy] %></p>
+　    　<h2>　　　　User Log in</h2>
 　　　　　 <div align="center">
 　　　　   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+           <h4><font color="red"><%= flash[:error] %></font></h4>
             <table>
               <tr>
   　　          <div class="field">

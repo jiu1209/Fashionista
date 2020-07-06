@@ -2,24 +2,11 @@
 <div class="container"> 
   <div class="row"> 
     <div class="col-xs-12">
-     <h2>　　　　　User Edit</h2>
+     <h2>　　　　User Edit</h2>
     <div align="center">
     <%= form_for(@user) do |f| %>
+    <%= render 'layouts/user_error_messages', model: f.object %>
     <table>
-    <tr>
-      <div class="field">
-        <th><%= f.label :ユーザー名 %><br /></th>
-        <td><%= f.text_field :name, autofocus: true, autocomplete: "name" %></td>
-      </div>
-    </tr>
-
-    <tr>
-      <div class="field">
-        <th><%= f.label :メールアドレス %><br /></th>
-        <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
-      </div>
-    </tr>
-    
      <tr>
       <div class="field">
         <th><%= f.label :性別 %><br /></th>
@@ -27,34 +14,49 @@
          　　<%= f.radio_button :gender, "女性",  {value: :female, style: "display: inline-block;"} %> 女性</td>
       </div>
     </tr>
+
+     <tr>
+      <div class="field">
+        <th><%= f.label :プロフィール写真 %><br /></th>
+        <td><%= f.attachment_field :image, autofocus: true, autocomplete: "image" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th><%= f.label :ユーザー名 %><br /></th>
+        <td><%= f.text_field :name, autofocus: true, autocomplete: "name", size: "50" %></td>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="field">
+        <th><%= f.label :メールアドレス %><br /></th>
+        <td><%= f.email_field :email, autofocus: true, autocomplete: "email", size: "50" %></td>
+      </div>
+    </tr>
     
     <tr>
       <div class="field">
         <th><%= f.label :身長 %><br /></th>
-        <td><%= f.text_field :height, autofocus: true, autocomplete: "height" %></td>
+        <td><%= f.text_field :height, autofocus: true, autocomplete: "height", size: "50" %></td>
       </div>
     </tr>
     
     <tr>
       <div class="field">
         <th><%= f.label :好きなブランド %><br /></th>
-        <td><%= f.text_field :favorite_brand, autofocus: true, autocomplete: "favorite_brand" %></td>
+        <td><%= f.text_field :favorite_brand, autofocus: true, autocomplete: "favorite_brand" , size: "50"%></td>
       </div>
     </tr>
 
     <tr>
       <div class="field">
         <th><%= f.label :自己紹介 %><br /></th>
-        <td><%= f.text_area :introduction, autofocus: true, autocomplete: "favorite_brand" %></td>
+        <td><%= f.text_area :introduction, autofocus: true, autocomplete: "introduction", size: "50" %></td>
       </div>
     </tr>
 
-    <tr>
-      <div class="field">
-        <th><%= f.label :プロフィール写真 %><br /></th>
-        <td><%= f.attachment_field :image, autofocus: true, autocomplete: "image" %></td>
-      </div>
-    </tr>
     <tr>
       <th><%= f.submit '更新する', class:"btn btn-primary" %></th>
       <td><%= link_to "退会する", user_path(current_user), method: :delete, data: { confirm: "本当に退会しますか?" },class:"btn btn-danger" %></td>

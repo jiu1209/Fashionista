@@ -1,6 +1,8 @@
 <div class="indextot">
   <div class= "container">
 	<div class="row">	
+    <p style="color: green;"><%= flash[:complete] %></p>
+    <p style="color: red;"><%= flash[:dastory] %></p>
 		<div class="col-xs-3">
 
 			 <%= render 'layouts/styling' %> 
@@ -14,7 +16,7 @@
                 <table>
               	  <tr>
                     <td><%= link_to attachment_image_tag(styiling, :styling_image, format: "jpeg", size: "250x330"), styiling_path(styiling.id) %>
-                      <div align="center"><%= styiling.created_at.strftime('%Y/%m/%d')%>　
+                      <div align="center"><%= styiling.created_at.strftime('%Y/%m/%d')%>
                         
                       <% if styiling.favorited_by?(current_user) %>
                        <%= link_to styiling_favorites_path(styiling.id), method: :delete do %>
