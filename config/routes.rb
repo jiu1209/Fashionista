@@ -8,6 +8,8 @@ root :to => "homes#top"
     registrations: 'users/registrations'
   }
    resources :users, only: [:show,:update,:edit,:index,:destroy]
+   get "user/:user_id/show_info" => "users#show_info", as:'show_info'
+   get "styiling/:styiling_id/styiling_info" => "styilings#styiling_info", as:'styiling_info'
    get "user/index_info" => "users#index_info"
    get "user/women_index" => "users#women_index"
    get "user/men_index" => "users#men_index"

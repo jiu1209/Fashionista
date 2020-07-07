@@ -14,5 +14,4 @@ class FavoritesController < ApplicationController
          favorite.destroy
          redirect_back(fallback_location: styilings_index_path(current_user))
 	end
-
 end

@@ -103,5 +103,16 @@ $(function() {
   },500); //0.5秒後にロゴをフェードイン!
   setTimeout(function(){
     $('.start').fadeOut(500);
-  },2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+  },2500); //2.5秒後にロゴ含め真っ黒背景をフェードアウト！
+});
+
+$(document).ready(function(){
+   $("#skippr-slider").skippr({
+      transition: 'slide',
+      autoPlay: true,
+      arrows : false,
+      speed : 1000,
+      autoPlayDuration : 5000,
+      transition: "fade",
+  });
 });

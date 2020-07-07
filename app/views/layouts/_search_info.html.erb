@@ -1,8 +1,0 @@
-  <div class="search-form">
-      <%= form_tag(search_info_path, method: :get) do %>
-        <%= search_field_tag 'search[content]' %>
-        <%= select_tag 'search[model]', options_for_select({ "user" => "user", "styling" => "styling" }) %>
-        <%= select_tag 'search[how]', options_for_select({ "完全一致" => "match", "前方一致" => "forward", "後方一致" => "backward", "部分一致" => "partical"  }) %>
-        <%= submit_tag '検索', class: "btn btn-primary btn-sm" %>
-      <% end %>
-    </div>

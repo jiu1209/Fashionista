@@ -66,7 +66,7 @@
               <% end %>
               <div align="right"><%= paginate @styilings %></div>
                <% if user_signed_in? && current_user.id == @user.id %>
-                <div align="right"><td><%= link_to "スタイリングを投稿する", new_styiling_path, class: "btn btn-primary btn-md", role: "botton" %></td></div>
+                <div align="left"><td><%= link_to "スタイリングを投稿する", new_styiling_path, class: "btn btn-primary btn-md", role: "botton" %></td></div>
               <% end %>
           </div>
     </div>

@@ -57,6 +57,11 @@ class StyilingsController < ApplicationController
        @styiling_comment = StyilingComment.new
    end
 
+   def styiling_info
+       @styiling = Styiling.find(params[:styiling_id])
+       @user = @styiling.user
+   end
+
    def edit 
        @styiling = Styiling.find(params[:id])
    end

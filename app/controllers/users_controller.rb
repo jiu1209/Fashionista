@@ -30,6 +30,11 @@ class UsersController < ApplicationController
 		@styilings = @user.styilings.page(params[:page]).per(8).reverse_order
 	end
 
+    def show_info
+        @user = User.find(params[:user_id])
+        @styilings = @user.styilings.page(params[:page]).per(8).reverse_order
+    end
+
 	def edit
 		@user = User.find(params[:id])
 

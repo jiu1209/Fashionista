@@ -1,0 +1,112 @@
+<head>
+  <title>Fashionista</title>
+  <nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navheadline">
+      <span class="navbar-text"><%= link_to root_path do %><img src="/assets/いじめっ子アイコン.jpeg" style="height:50px;width:50px;margin: 0 auto"></span><% end %>
+    </div>
+    <h3><span class="navbar-text"><div class="navheadline">That  makes life shine</div></span></h3>
+    <h2><span class="navbar-text"><div class="navheadline">Fashionista</div></span></h2>
+    <div class="navline">
+     <ul class="nav navbar-nav navbar-right">
+       <% if user_signed_in? %>
+         <li><%= link_to ' Styling', styilings_index_path(current_user), class: "glyphicon glyphicon-asterisk" %></li>
+         <li><%= link_to ' Profile', user_path(current_user), class: "glyphicon glyphicon-remove-sign" %></li>
+         <li><%= link_to ' Users', users_path, class: "glyphicon glyphicon-user" %></li>
+         <li><%= link_to " Logout", destroy_user_session_path, method: :delete, class: "glyphicon glyphicon-log-out" %> </li>
+     <% else %>
+        <li><%= link_to ' Styling', styilings_index_list_path, class: "glyphicon glyphicon-asterisk" %></li>
+        <li><%= link_to ' Users', user_index_info_path, class: "glyphicon glyphicon-user" %></li>
+        <li><%= link_to ' About', homes_about_path, class: "glyphicon glyphicon-scale" %></li>
+        <li><%= link_to ' Sign up', new_user_registration_path, class: "glyphicon glyphicon-edit" %></li>
+        <li><%= link_to ' Login', new_user_session_path, class: "glyphicon glyphicon-log-in" %></li>
+     <% end %>
+     </ul>
+   </div>
+  </nav>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <script src="https://kit.fontawesome.com/f4a34d9917.js" crossorigin="anonymous"></script>
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<div class="indextot">
+  <div class= "container">
+	  <div class="row">	
+        <div class="col-xs-6">
+        <p style="color: green;"><%= flash[:complete] %></p>
+          <table>
+            <tr>
+              <th><%= link_to attachment_image_tag(@user, :image, format: "jpeg", fallback:"no_image.jpg", size: "100x100"),show_info_path(@user.id)%></th>
+              <td><h4><%=  @user.name %></h4><%= @user.height %> | <%= @user.gender %> | <%= @user.favorite_brand %></td>
+            </tr>
+          </table>
+        </div>
+            <th><h2>Point's</h2></th>
+              <td><%= @styiling.detail %></td>
+            </br>
+            </br>
+            </br>
+          <% if user_signed_in? && current_user.id == @user.id %>
+            <tr> 
+              <th><%= link_to "スタイリングを編集する", edit_styiling_path, class: "btn btn-success ", role: "botton" %></th>
+            </tr>
+          <% end %>
+            </br> 
+            </br>
+          <div class="col-xs-12">
+            <h2>Styling Details</h2>
+              <div class="col-xs-5">
+                <tr>
+                  <th><%= attachment_image_tag @styiling, :styling_image, format: "jpeg", size: "450x580" %></th>
+                </tr>
+                <tr>
+                    <td>
+                      <div align="left"><%= @styiling.created_at.strftime('%Y/%m/%d')%></div></td>
+                  </tr>
+               <% @styiling.styiling_comments.each do |styiling_comment| %>
+               <table>
+                 <tr>
+                   <td><%= styiling_comment.user.name %> | <%= styiling_comment.created_at.strftime('%Y/%m/%d') %> 　　 <%= styiling_comment.comment %></td>
+                   <% if styiling_comment.user == current_user%>
+                   <td><%= link_to "削除", styiling_styiling_comment_path(styiling_comment.styiling, styiling_comment), method: :delete, class: "btn btn-danger btn-xs" %></td>
+                   <% end %>
+                 </tr>
+                </table>
+               <% end %>
+              </div>
+              <div class="col-xs-7">
+                <h2>Item's</h2>
+                  <table>
+                    <tr>
+                      <td><%= @styiling.item_one %></td><td><%= @styiling.brand_one %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_two %></td><td><%= @styiling.brand_two %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_three %></td><td><%= @styiling.brand_three %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_four %></td><td><%= @styiling.brand_four %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_five %></td><td><%= @styiling.brand_five %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_six %></td><td><%= @styiling.brand_six %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_seven %></td><td><%= @styiling.brand_seven %></td>
+                    </tr>
+                    <tr>
+                      <td><%= @styiling.item_eight %></td><td><%= @styiling.brand_eight %></td>
+                    </tr>
+                  </table>  
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

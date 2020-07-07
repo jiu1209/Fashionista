@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
+<head>
+</head>
   <body>
+     <div id="slider">
+        <div id="skippr-slider">
+           <div style="background-image: url(/assets/michael-lee-5Z9bgfRZLLE-unsplash.jpg)"></div>
+           <div style="background-image: url(/assets/flaunter-RC7bYyG5PUs-unsplash.jpg)"></div>
+           <div style="background-image: url(/assets/raden-prasetya-CQDkSdPOzYY-unsplash.jpg)"></div>
+           <div style="background-image: url(/assets/johny-vino-0-v2TqJ3Nxo-unsplash.jpg)"></div>
+        </div>
+     </div>
     <div class="indextot">
       <div class= "container">
 	    <div class="row">
+         <div class="border">
+          </div>
+             <h1 align="center">　<img src="/assets/いじめっ子アイコン2.jpeg" style="height:50px;width:50px;margin: 0 auto">　That makes life shine　<img src="/assets/いじめっ子アイコン2.jpeg" style="height:50px;width:50px;margin: 0 auto"></h1>
+           <div class="border">
+           </div>
+         </br>
+         </br>
+         </br>
+         </br>
+         </br>
+         </br>
 	     <div class="col-xs-3">
 	     	 <%= render 'layouts/styling' %>
 	     </div>
          <div class="col-xs-9">
-         <tr>
-           <div id="slider">
-              <div id="skippr-slider">
-                <div style="background-image: url(/assets/3_158538-4730.jpeg)"></div>
-                <div style="background-image: url(/assets/_158538-4893.jpg)"></div>
-                <div style="background-image: url(/assets/_158538-1337.jpg)"></div>
-                <div style="background-image: url(/assets/_158538-941.jpg)"></div>
-              </div>
-	        </div>
-	      </tr>
              <h2>Recommendation　Styling</h2>
 	      	 <%  @styilings.each do |styiling| %>
                <div class="userbox">
@@ -42,21 +51,7 @@
             </div>
           </div>
        </div>
-    </div>
-    </span>
-    <script src="./js/skippr.js" type="text/javascript"></script>
-        <script>
-      $(document).ready(function(){
-        $("#skippr-slider").skippr({
-         transition: 'slide',
-         autoPlay: true,
-         arrows : false,
-         speed : 1000,
-         autoPlayDuration : 5000,
-         transition: "fade",
-      });
-    });
-</script>
+      </div>
 <div class="start">
     <h1><p>Fashionista <i class="fab fa-earlybirds"></i></p></h1>
   </div>
