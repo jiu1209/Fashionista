@@ -1,38 +1,38 @@
 <div class="indextot">
   <div class= "container">
-	<div class="row">	
-		<div class="col-xs-3">
+	  <div class="row">	
+		  <div class="col-xs-3">
 
 			 <%= render 'layouts/styling' %> 
 
-		</div>
-	      <div class="col-xs-9">
-           <div align="right"><%= render 'layouts/search' %></div>
-	      	<h2>User's All</h2>
-	      	  <% @users.each do |user| %>
-               <div class="userbox">
-                <table>
-              	  <tr>
-                    <td><%=link_to attachment_image_tag(user, :image, format: "jpeg", fallback:"no_image.jpg", size: "200x200"), user_path(user.id) %></td>
-                  </tr>
-                  <tr>
-                    <td><%= link_to user.name, user_path(user.id) %>　　
-                   <% if current_user.following?(user) %>
-                     <%= link_to 'フォロー外す', unfollow_path(user.id), class: 'btn btn-primary btn-xs', method: :POST %>
-                 <% else %>
-                    <%= link_to 'フォローする', follow_path(user.id), class: 'btn btn-primary btn-xs', method: :POST %></td>
-                 <% end %>
+		  </div>
+	    <div class="col-xs-9">
+      <div align="right"><%= render 'layouts/search' %></div>
+	      <h2>User's All</h2>
+	      	<% @users.each do |user| %>
+            <div class="userbox">
+              <table>
+                <tr>
+                  <td><%=link_to attachment_image_tag(user, :image, format: "jpeg", fallback:"no_image.jpg", size: "200x200"), user_path(user.id) %></td>
+                </tr>
+                <tr>
+                  <td><%= link_to user.name, user_path(user.id) %>　　
+               <% if current_user.following?(user) %>
+                  <%= link_to 'フォロー外す', unfollow_path(user.id), class: 'btn btn-primary btn-xs', method: :POST %>
+               <% else %>
+                  <%= link_to 'フォローする', follow_path(user.id), class: 'btn btn-primary btn-xs', method: :POST %></td>
+               <% end %>
                </tr>
-                  <tr>
-                    <td><%= user.height %> | <%= user.gender %> | <%= user.favorite_brand %></td>
-                  </tr>
-                </table>
-              </div>
-              <% end %>
-              <div class='p-eu__paginate'>
-                <div align="right"><%= paginate @users %></div>
-              </div>
+               <tr>
+                 <td><%= user.height %> | <%= user.gender %> | <%= user.favorite_brand %></td>
+               </tr>
+              </table>
+            </div>
+         <% end %>
+         <div class='p-eu__paginate'>
+            <div align="right"><%= paginate @users %></div>
         </div>
       </div>
     </div>
+  </div>
 </div>

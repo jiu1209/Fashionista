@@ -48,7 +48,6 @@ class StyilingsController < ApplicationController
 
    def index
    	   @styilings = Styiling.all.page(params[:page]).per(15).reverse_order
-       @user = User.find(params[:id]) 
    end
 
    def show

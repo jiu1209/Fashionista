@@ -1,16 +1,16 @@
 <div class="indextot">
   <div class= "container">
-	<div class="row">	
-		<div class="col-xs-3">
+	  <div class="row">	
+		  <div class="col-xs-3">
 
-			 <%= render 'layouts/styling' %> 
+			  <%= render 'layouts/styling' %> 
 
-		</div>
+		  </div>
 	      <div class="col-xs-9">
-           <div align="right"><%= render 'layouts/search' %></div>
-	      	<h2>Women's</h2>
+          <div align="right"><%= render 'layouts/search' %></div>
+	          <h2>Women's</h2>
 	      	  <% @users.each do |user| %>
-               <div class="userbox">
+              <div class="userbox">
                 <table>
               	  <tr>
                     <td><%=link_to attachment_image_tag(user, :image, format: "jpeg", fallback:"no_image.jpg", size: "200x200"), user_path(user.id) %></td>
@@ -28,11 +28,11 @@
                   </tr>
                 </table>
               </div>
-              <% end %>
-              <div class='p-eu__paginate'>
-                <div align="right"><%= paginate @users %></div>
-              </div>
+            <% end %>
+           <div class='p-eu__paginate'>
+              <div align="right"><%= paginate @users %></div>
+           </div>
         </div>
-      </div>
     </div>
+  </div>
 </div>

@@ -100,10 +100,10 @@ $(window).scroll(function(){
 $(function() {
   setTimeout(function(){
     $('.start p').fadeIn(1600);
-  },500); //0.5秒後にロゴをフェードイン!
+  },500); 
   setTimeout(function(){
     $('.start').fadeOut(500);
-  },2500); //2.5秒後にロゴ含め真っ黒背景をフェードアウト！
+  },2500);
 });
 
 $(document).ready(function(){
@@ -114,5 +114,13 @@ $(document).ready(function(){
       speed : 1000,
       autoPlayDuration : 5000,
       transition: "fade",
+  });
+});
+
+$(function() {
+  $('.menu-trigger').on('click', function(event) {
+    $(this).toggleClass('active');
+    $('#sp-menu').fadeToggle();
+    event.preventDefault();
   });
 });

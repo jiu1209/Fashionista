@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'bookmarks/create'
-  get 'bookmarks/destroy'
 root :to => "homes#top"
  devise_for :users,controllers: {
     sessions: 'users/sessions',
@@ -9,14 +7,14 @@ root :to => "homes#top"
   }
    resources :users, only: [:show,:update,:edit,:index,:destroy]
    get "user/:user_id/show_info" => "users#show_info", as:'show_info'
-   get "styiling/:styiling_id/styiling_info" => "styilings#styiling_info", as:'styiling_info'
    get "user/index_info" => "users#index_info"
    get "user/women_index" => "users#women_index"
    get "user/men_index" => "users#men_index"
    get "user/women_index_info" => "users#women_index_info"
    get "user/men_index_info" => "users#men_index_info"
+   get "styiling/:styiling_id/styiling_info" => "styilings#styiling_info", as:'styiling_info'
    get "styilings/index_list" => "styilings#index_list"
-   get "styilings/:id/index" => "styilings#index", as: "styilings_index"
+   get "styilings/index" => "styilings#index", as: "styilings_index"
    get "styilings/women_index" => "styilings#women_index"
    get "styilings/men_index" => "styilings#men_index"
    get "styilings/women_index_info" => "styilings#women_index_info"
