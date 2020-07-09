@@ -5,7 +5,7 @@ class Styiling < ApplicationRecord
 	 has_many :favorites, dependent: :destroy
 
 	 validates :gender,:styling_image,:detail,:item_one,:brand_one,presence: true
-	 validates :datail, length: {maximum: 50}
+	 validates :detail, length: {maximum: 100}
 
  def favorited_by?(user)
      favorites.where(user_id: user.id).exists?

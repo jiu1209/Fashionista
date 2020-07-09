@@ -13792,3 +13792,1196 @@ Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/homes/top_info" for 127.0.0.1 at 2020-07-09 04:13:46 +0000
+Processing by HomesController#top_info as HTML
+  Rendering homes/top_info.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.8ms)
+  [1m[36mStyiling Load (0.2ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  Rendered homes/top_info.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_header.html.erb (514.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 549ms (Views: 534.7ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-07-09 04:13:46 +0000
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (1.5ms)
+  [1m[36mStyiling Load (0.8ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  Rendered homes/top.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/homes/about" for 127.0.0.1 at 2020-07-09 04:13:46 +0000
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/search" for 127.0.0.1 at 2020-07-09 04:13:46 +0000
+Processing by SearchController#search as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/index" for 127.0.0.1 at 2020-07-09 04:13:46 +0000
+Processing by StyilingsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/index_list" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#index_list as HTML
+  Rendering styilings/index_list.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.2ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/index_list.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/all_ranking" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#all_ranking as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT  "favorites"."styiling_id" FROM "favorites" GROUP BY "favorites"."styiling_id" ORDER BY count(styiling_id) desc LIMIT ?[0m  [["LIMIT", 9]]
+  Rendering styilings/all_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.7ms)
+  Rendered styilings/all_ranking.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 5.8ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/all_ranking_info" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#all_ranking_info as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT  "favorites"."styiling_id" FROM "favorites" GROUP BY "favorites"."styiling_id" ORDER BY count(styiling_id) desc LIMIT ?[0m  [["LIMIT", 9]]
+  Rendering styilings/all_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  Rendered styilings/all_ranking_info.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_index" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#women_index as HTML
+  Rendering styilings/women_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mStyiling Load (0.3ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/women_index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_index_info" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#women_index_info as HTML
+  Rendering styilings/women_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.7ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/women_index_info.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_ranking" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#women_ranking as HTML
+  Rendering styilings/women_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.6ms)
+  Rendered layouts/_search.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.5ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "女性"], ["LIMIT", 9]]
+  Rendered styilings/women_ranking.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_ranking_info" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#women_ranking_info as HTML
+  Rendering styilings/women_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.6ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "女性"], ["LIMIT", 9]]
+  Rendered styilings/women_ranking_info.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 5.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_index" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#men_index as HTML
+  Rendering styilings/men_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.6ms)
+  Rendered layouts/_search.html.erb (0.5ms)
+  [1m[36mStyiling Load (0.4ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/men_index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_index_info" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#men_index_info as HTML
+  Rendering styilings/men_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.8ms)
+  [1m[36mStyiling Load (0.6ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/men_index_info.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_ranking" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#men_ranking as HTML
+  Rendering styilings/men_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.4ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mStyiling Load (0.7ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "男性"], ["LIMIT", 9]]
+  Rendered styilings/men_ranking.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_ranking_info" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#men_ranking_info as HTML
+  Rendering styilings/men_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.3ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "男性"], ["LIMIT", 9]]
+  Rendered styilings/men_ranking_info.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/new" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by StyilingsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.4ms)
+  Rendered layouts/_search.html.erb (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/index_info" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by UsersController#index_info as HTML
+  Rendering users/index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/index_info.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/men_index" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by UsersController#men_index as HTML
+  Rendering users/men_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/men_index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/men_index_info" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by UsersController#men_index_info as HTML
+  Rendering users/men_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/men_index_info.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/women_index" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by UsersController#women_index as HTML
+  Rendering users/women_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/women_index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/women_index_info" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by UsersController#women_index_info as HTML
+  Rendering users/women_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/women_index_info.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (77.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/password/new" for 127.0.0.1 at 2020-07-09 04:13:47 +0000
+Processing by Users::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/passwords/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/contacts/new" for 127.0.0.1 at 2020-07-09 04:16:56 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (445.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 476ms (Views: 460.5ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/homes/top_info" for 127.0.0.1 at 2020-07-09 04:16:56 +0000
+Processing by HomesController#top_info as HTML
+  Rendering homes/top_info.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (1.0ms)
+  [1m[36mStyiling Load (0.2ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  Rendered homes/top_info.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 11.7ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-07-09 04:16:56 +0000
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (1.2ms)
+  [1m[36mStyiling Load (0.4ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  Rendered homes/top.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/homes/about" for 127.0.0.1 at 2020-07-09 04:16:56 +0000
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/search" for 127.0.0.1 at 2020-07-09 04:16:56 +0000
+Processing by SearchController#search as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/index" for 127.0.0.1 at 2020-07-09 04:16:56 +0000
+Processing by StyilingsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/index_list" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#index_list as HTML
+  Rendering styilings/index_list.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.4ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/index_list.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/all_ranking" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#all_ranking as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT  "favorites"."styiling_id" FROM "favorites" GROUP BY "favorites"."styiling_id" ORDER BY count(styiling_id) desc LIMIT ?[0m  [["LIMIT", 9]]
+  Rendering styilings/all_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.6ms)
+  Rendered styilings/all_ranking.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/all_ranking_info" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#all_ranking_info as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT  "favorites"."styiling_id" FROM "favorites" GROUP BY "favorites"."styiling_id" ORDER BY count(styiling_id) desc LIMIT ?[0m  [["LIMIT", 9]]
+  Rendering styilings/all_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  Rendered styilings/all_ranking_info.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_index" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#women_index as HTML
+  Rendering styilings/women_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.4ms)
+  [1m[36mStyiling Load (0.6ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/women_index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_index_info" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#women_index_info as HTML
+  Rendering styilings/women_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.5ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/women_index_info.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_ranking" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#women_ranking as HTML
+  Rendering styilings/women_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mStyiling Load (0.5ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "女性"], ["LIMIT", 9]]
+  Rendered styilings/women_ranking.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_ranking_info" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#women_ranking_info as HTML
+  Rendering styilings/women_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.5ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "女性"], ["LIMIT", 9]]
+  Rendered styilings/women_ranking_info.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_index" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#men_index as HTML
+  Rendering styilings/men_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mStyiling Load (0.3ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/men_index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_index_info" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#men_index_info as HTML
+  Rendering styilings/men_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.2ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/men_index_info.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_ranking" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#men_ranking as HTML
+  Rendering styilings/men_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.5ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "男性"], ["LIMIT", 9]]
+  Rendered styilings/men_ranking.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_ranking_info" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#men_ranking_info as HTML
+  Rendering styilings/men_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.4ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "男性"], ["LIMIT", 9]]
+  Rendered styilings/men_ranking_info.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/new" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by StyilingsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.5ms)
+  Rendered layouts/_search.html.erb (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 10.1ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/index_info" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by UsersController#index_info as HTML
+  Rendering users/index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/index_info.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/men_index" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by UsersController#men_index as HTML
+  Rendering users/men_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/men_index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/men_index_info" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by UsersController#men_index_info as HTML
+  Rendering users/men_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/men_index_info.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/women_index" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by UsersController#women_index as HTML
+  Rendering users/women_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/women_index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/women_index_info" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by UsersController#women_index_info as HTML
+  Rendering users/women_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/women_index_info.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (51.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 60ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/password/new" for 127.0.0.1 at 2020-07-09 04:16:57 +0000
+Processing by Users::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/passwords/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/contacts/new" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (432.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 461ms (Views: 446.4ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/homes/top_info" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by HomesController#top_info as HTML
+  Rendering homes/top_info.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.8ms)
+  [1m[36mStyiling Load (0.2ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  Rendered homes/top_info.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 10.5ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.8ms)
+  [1m[36mStyiling Load (0.2ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  Rendered homes/top.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/homes/about" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/search" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by SearchController#search as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/index" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/index_list" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#index_list as HTML
+  Rendering styilings/index_list.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.2ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/index_list.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/all_ranking" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#all_ranking as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT  "favorites"."styiling_id" FROM "favorites" GROUP BY "favorites"."styiling_id" ORDER BY count(styiling_id) desc LIMIT ?[0m  [["LIMIT", 9]]
+  Rendering styilings/all_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.6ms)
+  Rendered styilings/all_ranking.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/all_ranking_info" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#all_ranking_info as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT  "favorites"."styiling_id" FROM "favorites" GROUP BY "favorites"."styiling_id" ORDER BY count(styiling_id) desc LIMIT ?[0m  [["LIMIT", 9]]
+  Rendering styilings/all_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  Rendered styilings/all_ranking_info.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_index" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#women_index as HTML
+  Rendering styilings/women_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mStyiling Load (0.4ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/women_index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_index_info" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#women_index_info as HTML
+  Rendering styilings/women_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.4ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/women_index_info.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_ranking" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#women_ranking as HTML
+  Rendering styilings/women_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mStyiling Load (0.4ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "女性"], ["LIMIT", 9]]
+  Rendered styilings/women_ranking.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_ranking_info" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#women_ranking_info as HTML
+  Rendering styilings/women_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.5ms)
+  [1m[36mStyiling Load (0.5ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "女性"], ["LIMIT", 9]]
+  Rendered styilings/women_ranking_info.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_index" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#men_index as HTML
+  Rendering styilings/men_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mStyiling Load (0.2ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/men_index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_index_info" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#men_index_info as HTML
+  Rendering styilings/men_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.2ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/men_index_info.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_ranking" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#men_ranking as HTML
+  Rendering styilings/men_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mStyiling Load (0.3ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "男性"], ["LIMIT", 9]]
+  Rendered styilings/men_ranking.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_ranking_info" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#men_ranking_info as HTML
+  Rendering styilings/men_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.3ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "男性"], ["LIMIT", 9]]
+  Rendered styilings/men_ranking_info.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/new" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by StyilingsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/index_info" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by UsersController#index_info as HTML
+  Rendering users/index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/index_info.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/men_index" for 127.0.0.1 at 2020-07-09 04:21:18 +0000
+Processing by UsersController#men_index as HTML
+  Rendering users/men_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/men_index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/men_index_info" for 127.0.0.1 at 2020-07-09 04:21:19 +0000
+Processing by UsersController#men_index_info as HTML
+  Rendering users/men_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/men_index_info.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/women_index" for 127.0.0.1 at 2020-07-09 04:21:19 +0000
+Processing by UsersController#women_index as HTML
+  Rendering users/women_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/women_index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/women_index_info" for 127.0.0.1 at 2020-07-09 04:21:19 +0000
+Processing by UsersController#women_index_info as HTML
+  Rendering users/women_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/women_index_info.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-07-09 04:21:19 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-07-09 04:21:19 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (79.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 91ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/password/new" for 127.0.0.1 at 2020-07-09 04:21:19 +0000
+Processing by Users::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/passwords/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/contacts/new" for 127.0.0.1 at 2020-07-09 04:31:16 +0000
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (455.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 484ms (Views: 468.5ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/homes/top_info" for 127.0.0.1 at 2020-07-09 04:31:16 +0000
+Processing by HomesController#top_info as HTML
+  Rendering homes/top_info.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.8ms)
+  [1m[36mStyiling Load (0.3ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  Rendered homes/top_info.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.8ms)
+  [1m[36mStyiling Load (0.2ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+  Rendered homes/top.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/homes/about" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/search" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by SearchController#search as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/index" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/index_list" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#index_list as HTML
+  Rendering styilings/index_list.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.3ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/index_list.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/all_ranking" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#all_ranking as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT  "favorites"."styiling_id" FROM "favorites" GROUP BY "favorites"."styiling_id" ORDER BY count(styiling_id) desc LIMIT ?[0m  [["LIMIT", 9]]
+  Rendering styilings/all_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.7ms)
+  Rendered styilings/all_ranking.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/all_ranking_info" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#all_ranking_info as HTML
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT  "favorites"."styiling_id" FROM "favorites" GROUP BY "favorites"."styiling_id" ORDER BY count(styiling_id) desc LIMIT ?[0m  [["LIMIT", 9]]
+  Rendering styilings/all_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  Rendered styilings/all_ranking_info.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_index" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#women_index as HTML
+  Rendering styilings/women_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mStyiling Load (0.5ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/women_index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_index_info" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#women_index_info as HTML
+  Rendering styilings/women_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.3ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/women_index_info.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_ranking" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#women_ranking as HTML
+  Rendering styilings/women_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.6ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "女性"], ["LIMIT", 9]]
+  Rendered styilings/women_ranking.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/women_ranking_info" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#women_ranking_info as HTML
+  Rendering styilings/women_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.4ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "女性"], ["LIMIT", 9]]
+  Rendered styilings/women_ranking_info.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_index" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#men_index as HTML
+  Rendering styilings/men_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mStyiling Load (0.4ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/men_index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_index_info" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#men_index_info as HTML
+  Rendering styilings/men_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.3ms)
+  [1m[36mStyiling Load (0.3ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" WHERE "styilings"."gender" = ? ORDER BY "styilings"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 15], ["OFFSET", 0]]
+  Rendered styilings/men_index_info.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_ranking" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#men_ranking as HTML
+  Rendering styilings/men_ranking.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.2ms)
+  [1m[36mStyiling Load (0.5ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "男性"], ["LIMIT", 9]]
+  Rendered styilings/men_ranking.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/men_ranking_info" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#men_ranking_info as HTML
+  Rendering styilings/men_ranking_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.4ms)
+  [1m[36mStyiling Load (0.5ms)[0m  [1m[34mSELECT  "styilings".* FROM "styilings" INNER JOIN "favorites" ON "favorites"."styiling_id" = "styilings"."id" WHERE "styilings"."gender" = ? GROUP BY "styiling_id" ORDER BY count(favorites.styiling_id) desc LIMIT ?[0m  [["gender", "男性"], ["LIMIT", 9]]
+  Rendered styilings/men_ranking_info.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/styilings/new" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by StyilingsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.3ms)
+  Rendered layouts/_search.html.erb (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/index_info" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by UsersController#index_info as HTML
+  Rendering users/index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/index_info.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/men_index" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by UsersController#men_index as HTML
+  Rendering users/men_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.4ms)
+  Rendered layouts/_search.html.erb (16.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/men_index.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/men_index_info" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by UsersController#men_index_info as HTML
+  Rendering users/men_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "男性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/men_index_info.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/women_index" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by UsersController#women_index as HTML
+  Rendering users/women_index.html.erb within layouts/application
+  Rendered layouts/_styling.html.erb (0.7ms)
+  Rendered layouts/_search.html.erb (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/women_index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user/women_index_info" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by UsersController#women_index_info as HTML
+  Rendering users/women_index_info.html.erb within layouts/application
+  Rendered layouts/_styling_info.html.erb (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."gender" = ? ORDER BY "users"."id" DESC LIMIT ? OFFSET ?[0m  [["gender", "女性"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered users/women_index_info.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (60.6ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 70ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/password/new" for 127.0.0.1 at 2020-07-09 04:31:17 +0000
+Processing by Users::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/passwords/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

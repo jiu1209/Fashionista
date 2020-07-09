@@ -26,7 +26,6 @@ root :to => "homes#top"
    get "styilings/women_ranking_info" => "styilings#women_ranking_info"
    get "styilings/men_ranking_info" => "styilings#men_ranking_info"
    resources :styilings do
-   resource :bookmarks, only: [:create, :destroy]
    resource :favorites, only: [:create, :destroy]
    resources :styiling_comments, only: [:create, :destroy]
   end

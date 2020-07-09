@@ -67,10 +67,11 @@ class StyilingsController < ApplicationController
 
    def update
        @styiling = Styiling.find(params[:id])
-     if@styiling .update(styiling_params)
+
+   if  @styiling .update(styiling_params)
        flash[:complete] = "＊ スタイリングを更新しました。"
        redirect_to  styiling_path(@styiling.id)
-     else
+  else
        render "edit"
      end
    end
@@ -101,11 +102,7 @@ class StyilingsController < ApplicationController
 
    def styiling_params
     params.require(:styiling).permit(:user_id,:styling_image,:detail,:item_one,:item_two,:item_three,:item_four,:item_five,:item_six,
-    	:item_seven,:item_eight,:brand_one,:brand_two,:brand_three,:brand_four,:brand_five,:brand_six,:brand_seven,:brand_eight,:gender, :user_id )
-   end
-
-   def bookmarks
-    @styilings = current_user.bookmark_boards.includes(:user).recent
+    	:item_seven,:item_eight,:brand_one,:brand_two,:brand_three,:brand_four,:brand_five,:brand_six,:brand_seven,:brand_eight,:gender,:user_id)
    end
 
     def logged_in_user
