@@ -6,4 +6,10 @@ class ContactMailerPreview < ActionMailer::Preview
     ContactMailer.contact_mail
   end
 
+  def contact
+      contact = Contact.new(email: "c@c", message: "問い合わせメッセージ")
+
+     ContactMailer.send_mail(contact)
+   end
+
 end

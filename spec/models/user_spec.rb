@@ -1,21 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-    describe "Userモデルのテスト" do 
-       @user = User.new( 
-       name: "John",
-       email: "test@example.com", 
-       password: "i-am-john" 
-      )
-    end
-     context 'nameカラム' do
-      @user = User.new(name: nil)
-      @user.valid?
-    end 
-   context 'genderカラム' do
-      @user = User.new(gender: nil)
-      @user.valid?
-    end 
+  
   describe 'アソシエーションのテスト' do
     context 'Styilingモデルとの関係' do
       it '1:Nとなっている' do
@@ -37,4 +23,5 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
 end

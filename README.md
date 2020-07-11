@@ -5,7 +5,7 @@
 　いいね機能、フォロー機能、コメントで評価を得られるサイト。
  (使用する、スタイリング写真は自身の物、もしくは友人に承諾を得る）
 
-・メンズ、ウイメンズ、キッズなどジャンル毎に検索、ページ表示できるようにして、
+・メンズ、ウイメンズなどジャンル毎に検索、ページ表示できるようにして、
 　ランキング形式で会員を表示する。
 
 ### サイトテーマ
@@ -45,7 +45,12 @@ https://docs.google.com/spreadsheets/d/1puqw5HbG80Ck16tByaVoRqizEL6sqtS0/edit#gi
 
 ・アプリケーション詳細設計
 https://docs.google.com/spreadsheets/d/1xK6rnAlcNiCb0jiC0HNpmxxccSSBEZj4/edit#gid=1739920144
+
+・テスト仕様書
+https://1drv.ms/x/s!AllHd8HsX8WrdcPAumC96SSDHG0
+
 ### 機能一覧
+
 https://docs.google.com/spreadsheets/d/10VqEwGp5fJVxd7J9cf7pGzEx7rzMmm0DN2bsS5TeiD0/edit#gid=0
 
 
