@@ -2,11 +2,11 @@
    <nav class="navbar navbar-fixed-top navbar-inverse">
      <div class="navheadline">
        <% if user_signed_in? %>
-         <span class="navbar-text"><%= link_to homes_top_info_path do %><img src="/assets/いじめっ子アイコン.jpeg" style="height:50px;width:50px;margin: 0 auto"></span><% end %>
+         <span class="navbar-text"><%= link_to homes_top_info_path do %><%= image_tag asset_path("いじめっ子アイコン.jpeg") ,size:"50x50"%></span><% end %>
          <% else %>
      </div>
      <div class="navheadline">
-        <span class="navbar-text"><%= link_to root_path do %><img src="/assets/いじめっ子アイコン.jpeg" style="height:50px;width:50px;margin: 0 auto"></span><% end %>
+        <span class="navbar-text"><%= link_to root_path do %><%= image_tag asset_path("いじめっ子アイコン.jpeg"),size:"50x50"%></span><% end %>
         <% end %>
      </div>
      <% if user_signed_in? %>
