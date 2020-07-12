@@ -1,5 +1,5 @@
-Rails.application.routes.draw do
-root :to => "homes#top"
+Rails.application.routes.draw do 
+ root :to => "homes#top"
  devise_for :users,controllers: {
     sessions: 'users/sessions',
     passwords: 'users/passwords',
@@ -40,7 +40,5 @@ root :to => "homes#top"
   get 'contacts/new' => "contacts#new"
   post 'contacts/create' => "contacts#create"
 
-  if Rails.env.development?
-  mount LetterOpenerWeb::Engine, at: '/letter_opener'
-  end
+ 
 end

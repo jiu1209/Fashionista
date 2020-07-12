@@ -1,5 +1,5 @@
 current directory: /home/vagrant/work/Fashionista/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.10.9/ext/nokogiri
-/home/vagrant/.rbenv/versions/2.5.7/bin/ruby -r ./siteconf20200711-16031-1c4tch3.rb extconf.rb
+/home/vagrant/.rbenv/versions/2.5.7/bin/ruby -r ./siteconf20200712-22494-1pjhl9s.rb extconf.rb
 checking if the C compiler accepts ... yes
 Building nokogiri using packaged libraries.
 Using mini_portile version 2.4.0

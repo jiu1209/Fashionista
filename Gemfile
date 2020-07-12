@@ -72,7 +72,9 @@ gem 'pry-byebug'
 gem 'ransack'
 gem 'font-awesome-sass', '~> 5.4.1'
 gem 'rqrcode'
-gem 'letter_opener'
-gem 'letter_opener_web'
+gem 'letter_opener_web', :group => :development
 gem 'rails-i18n'
 gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
