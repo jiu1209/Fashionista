@@ -1,10 +1,10 @@
            <table class="table">
 			   <h4><i class="fas fa-user-astronaut"></i> ユーザー</h4>
 			  <tr>
-			  	<th><div class="color_info"><%= link_to "Women's", user_women_index_info_path %></div></th>
+			  	<th><div class="color_info"><%= link_to "Women's", user_women_index_info_path, data: {"turbolinks" => false} %></div></th>
 			  </tr>
 			  <tr>
-			  	<th><%= link_to "Men's", user_men_index_info_path %></th>
+			  	<th><%= link_to "Men's", user_men_index_info_path, data: {"turbolinks" => false} %></th>
 			  </tr>
 			  <tr>
 			  	<th></th>
@@ -13,10 +13,10 @@
             <table class="table">
             	<h4><i class="fas fa-cannabis"></i> スタイリング</h4>
 			  <tr>
-			  	<th><%= link_to "Women's", styilings_women_index_info_path %></th>
+			  	<th><%= link_to "Women's", styilings_women_index_info_path, data: {"turbolinks" => false} %></th>
 			  </tr>
 			  <tr>
-			  	<th><%= link_to "Men's", styilings_men_index_info_path %></th>
+			  	<th><%= link_to "Men's", styilings_men_index_info_path, data: {"turbolinks" => false} %></th>
 			  </tr>
 			   <tr>
 			  	<th></th>
@@ -25,13 +25,13 @@
 			<table class="table">
 			  	<h4><i class="fas fa-chess-rook"></i> スタイリングランキング</h4>
 			  <tr>
-			  	<th><%= link_to "All Ranking", styilings_all_ranking_info_path %></th>
+			  	<th><%= link_to "All Ranking", styilings_all_ranking_info_path, data: {"turbolinks" => false}%></th>
 			  </tr>
 			  <tr>
-			  	<th><%= link_to "Women's", styilings_women_ranking_info_path %></th>
+			  	<th><%= link_to "Women's", styilings_women_ranking_info_path, data: {"turbolinks" => false}%></th>
 			  </tr>
 			  <tr>
-			  	<th><%= link_to "Men's", styilings_men_ranking_info_path %></th>
+			  	<th><%= link_to "Men's", styilings_men_ranking_info_path, data: {"turbolinks" => false} %></th>
 			  </tr>
 			  <tr>
 			  	<th></th>

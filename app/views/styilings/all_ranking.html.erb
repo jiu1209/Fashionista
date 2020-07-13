@@ -19,7 +19,7 @@
                     </tr>
                   </tr>
                   <tr>
-                    <td><%= link_to attachment_image_tag(styiling.user, :image, format: "jpeg", size: "30x30"),user_path(  styiling.user.id) %>
+                    <td><%= link_to attachment_image_tag(styiling.user, :image, format: "jpeg",fallback:"no_image.jpg", size: "30x30"),user_path(  styiling.user.id) %>
                         <%= link_to styiling.user.name, user_path(styiling.user.id) %> | <%= styiling.user.height %></td>
                   </tr>
                 </table>
