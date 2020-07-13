@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	 before_action :authenticate_user!, only: [:show,:edit,:update]
+	 before_action :authenticate_user!, only: [:show,:edit,:update,:index]
 	 before_action :logged_in_user, only: [:edit]
     def women_index
     	@users = User.where(gender:"女性").page(params[:page]).per(20).reverse_order
