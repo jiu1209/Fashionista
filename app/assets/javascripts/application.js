@@ -23,8 +23,8 @@ $(document).on('turbolinks:load', function() {
     }, 1000);
     event.preventDefault();
   });
- 
 });
+
 $(document).on('turbolinks:load', function() {
 $('#animation').css('visibility','hidden');
 $(window).scroll(function(){
@@ -116,17 +116,6 @@ $(document).on('turbolinks:load', function() {
   setTimeout(function(){
     $('.start').fadeOut(500);
   },2500);
-});
-
-$(document).on('turbolinks:load', function() {
-   $("#skippr-slider").skippr({
-      transition: 'slide',
-      autoPlay: true,
-      arrows : false,
-      speed : 1000,
-      autoPlayDuration : 5000,
-      transition: "fade",
-  });
 });
 
 $(document).on('turbolinks:load', function() {
