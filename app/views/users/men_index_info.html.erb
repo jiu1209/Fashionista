@@ -12,10 +12,10 @@
             <div class="userbox">
               <table>
                 <tr>
-                  <td><%=link_to attachment_image_tag(user, :image, format: "jpeg", fallback:"no_image.jpg", size: "200x200"), show_info_path(user.id) %></td>
+                  <td><%=link_to attachment_image_tag(user, :image, format: "jpeg", fallback:"no_image.jpg", size: "200x200"), show_info_path(user.id), data: {"turbolinks" => false}, data: {"turbolinks" => false} %></td>
                   </tr>
                 <tr>
-                  <td><%= link_to user.name, show_info_path(user.id) %>　　
+                  <td><%= link_to user.name, show_info_path(user.id), data: {"turbolinks" => false} %>　　
                 </tr>
                 <tr>
                   <td><%= user.height %> | <%= user.gender %> | <%= user.favorite_brand %></td>

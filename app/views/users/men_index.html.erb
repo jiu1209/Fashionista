@@ -13,14 +13,14 @@
               <div class="userbox">
                 <table>
               	  <tr>
-                    <td><%=link_to attachment_image_tag(user, :image, format: "jpeg", fallback:"no_image.jpg", size: "200x200"), user_path(user.id) %></td>
+                    <td><%=link_to attachment_image_tag(user, :image, format: "jpeg", fallback:"no_image.jpg", size: "200x200"), user_path(user.id), data: {"turbolinks" => false} %></td>
                   </tr>
                   <tr>
-                    <td><%= link_to user.name, user_path(user.id) %>　　
+                    <td><%= link_to user.name, user_path(user.id), data: {"turbolinks" => false} %>　　
                  <% if current_user.following?(user) %>
-                     <%= link_to 'フォロー外す', unfollow_path(user.id), class: 'btn btn-primary btn-xs', method: :POST %>
+                     <%= link_to 'フォロー外す', unfollow_path(user.id), data: {"turbolinks" => false}, class: 'btn btn-primary btn-xs', method: :POST %>
                  <% else %>
-                    <%= link_to 'フォローする', follow_path(user.id), class: 'btn btn-primary btn-xs', method: :POST %></td>
+                    <%= link_to 'フォローする', follow_path(user.id), data: {"turbolinks" => false}, class: 'btn btn-primary btn-xs', method: :POST %></td>
                  <% end %>
                  </tr>
                   <tr>
