@@ -24,12 +24,6 @@
 a:link, a:visited, a:hover, a:active {
   color: black;
 }
-@font-face {
-  font-family:'Yrsa';
-  src: font-url('Yrsa') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 table{
   width: 50%;
   border-collapse: collapse;
@@ -47,7 +41,6 @@ tr .none{
 }
 .indextot {
    margin: 140px;
-   font-family: 'Yrsa';
 }
 .userbox {
   display: inline-flex;
@@ -89,7 +82,6 @@ footer {
   height: 70px;
   position: absolute;
   background: #222222;
-  font-family: 'Yrsa';
 }
 footer .copyright {
   float: left;
