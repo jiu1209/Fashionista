@@ -118,9 +118,9 @@
     </tr>
      <tr>
        <div class="actions">
-         <th><%= f.submit "スタイリングを編集する", class:"btn btn-success btn-lg" %></th>
+         <th><%= f.submit "スタイリングを編集する", data: {"turbolinks" => false}, class:"btn btn-success btn-lg" %></th>
        </div>
-        <td><%= link_to "スタイリングを削除する", styiling_path(@styiling.id), method: :delete, data: { confirm: "本当に削除しますか?" },class:"btn btn-danger" %></td>
+        <td><%= link_to "スタイリングを削除する", styiling_path(@styiling.id), data: {"turbolinks" => false}, method: :delete, data: { confirm: "本当に削除しますか?" },class:"btn btn-danger" %></td>
      </tr>
      </table>
     <% end %>

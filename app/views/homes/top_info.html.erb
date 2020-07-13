@@ -30,24 +30,24 @@
                <div class="userbox">
                <table>
                     <tr>
-                      <td><%= link_to attachment_image_tag(styiling, :styling_image, format: "jpeg", size: "250x330"), styiling_path(styiling.id) %>
+                      <td><%= link_to attachment_image_tag(styiling, :styling_image, format: "jpeg", size: "250x330"), styiling_path(styiling.id), data: {"turbolinks" => false} %>
                       <div align="center"><%= styiling.created_at.strftime('%Y/%m/%d')%>　
                         
                     <% if styiling.favorited_by?(current_user) %>
                         <%= link_to styiling_favorites_path(styiling.id), method: :delete do %>
                          <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
-                         <%= styiling.favorites.count %> | <i class="fas fa-comment-alt"></i> <%= link_to "#{styiling.styiling_comments.count}", styiling_path(styiling.id) %>
+                         <%= styiling.favorites.count %> | <i class="fas fa-comment-alt"></i> <%= link_to "#{styiling.styiling_comments.count}", styiling_path(styiling.id), data: {"turbolinks" => false} %>
                       <% end %>
                       <% else %>
                         <%= link_to styiling_favorites_path(styiling.id), method: :post do %>
                         <i class="fa fa-heart" aria-hidden="true"></i>
-                        <%= styiling.favorites.count %> | <i class="fas fa-comment-alt"></i> <%= link_to "#{styiling.styiling_comments.count}", styiling_path(styiling.id) %></td>
+                        <%= styiling.favorites.count %> | <i class="fas fa-comment-alt"></i> <%= link_to "#{styiling.styiling_comments.count}", styiling_path(styiling.id), data: {"turbolinks" => false} %></td>
                       <% end %>
                     <% end %></td></div>
                   </tr>
                   <tr>
                     <td><%= link_to attachment_image_tag(styiling.user, :image, format: "jpeg", fallback:"no_image.jpg", size: "30x30"),user_path(  styiling.user.id) %>
-                        <%= link_to styiling.user.name, user_path(styiling.user.id) %> | <%= styiling.user.height %></td>
+                        <%= link_to styiling.user.name, user_path(styiling.user.id), data: {"turbolinks" => false} %> | <%= styiling.user.height %></td>
                   </tr>
                 </table>
               </div>

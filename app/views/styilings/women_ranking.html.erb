@@ -13,14 +13,14 @@
                 <div class="userbox">
                   <table>
               	    <tr>
-                      <td><%= link_to attachment_image_tag(gender, :styling_image, format: "jpeg", size: "250x330"), styiling_path(gender.id) %>
+                      <td><%= link_to attachment_image_tag(gender, :styling_image, format: "jpeg", size: "250x330"), styiling_path(gender.id), data: {"turbolinks" => false} %>
                       <tr>
                   	    <td><i class="fas fa-chess-queen"></i> 第<%= i %>位</td>
                       </tr>
                     </tr>
                     <tr>
-                      <td><%= link_to attachment_image_tag(gender.user, :image, format: "jpeg",fallback:"no_image.jpg", size: "30x30"),user_path(  gender.user.id) %>
-                        <%= link_to gender.user.name, user_path(gender.user.id) %> | <%= gender.user.height %></td>
+                      <td><%= link_to attachment_image_tag(gender.user, :image, format: "jpeg",fallback:"no_image.jpg", size: "30x30"),user_path(  gender.user.id), data: {"turbolinks" => false} %>
+                        <%= link_to gender.user.name, user_path(gender.user.id), data: {"turbolinks" => false} %> | <%= gender.user.height %></td>
                     </tr>
                   </table>
                 </div>

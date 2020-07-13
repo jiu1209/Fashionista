@@ -88,8 +88,8 @@
 
               <tr>
                 <div class="actions">
-                  <th><%= f.submit "登録する", class:"btn btn-success btn-lg" %></th>
-                  <td><h5>登録済みのユーザーはこちらから<%= link_to "ログイン",new_user_session_path %>してください</h5></td>
+                  <th><%= f.submit "登録する", data: {"turbolinks" => false}, class:"btn btn-success btn-lg" %></th>
+                  <td><h5>登録済みのユーザーはこちらから<%= link_to "ログイン",new_user_session_path, data: {"turbolinks" => false} %>してください</h5></td>
                 </div>
               </tr>
              </table>

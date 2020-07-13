@@ -6,19 +6,19 @@
         <p style="color: green;"><%= flash[:complete] %></p>
           <table>
              <tr>
-              <th><%= link_to attachment_image_tag(@user, :image, format: "jpeg", fallback:"no_image.jpg", size: "100x100"),user_path(@user.id)%></th>
+              <th><%= link_to attachment_image_tag(@user, :image, format: "jpeg", fallback:"no_image.jpg", size: "100x100"),user_path(@user.id), data: {"turbolinks" => false}%></th>
               <td><h4><%=  @user.name %></h4><%= @user.height %> | <%= @user.gender %> | <%= @user.favorite_brand %></td>
             </tr>
             <tr>
              <% if current_user.following?(@user) %>
-                 <div align="left"><th><%= link_to 'フォロー外す', unfollow_path(@user.id), class: 'btn btn-primary btn-sm ', method: :POST %></th></div>
+                 <div align="left"><th><%= link_to 'フォロー外す', unfollow_path(@user.id), data: {"turbolinks" => false}, class: 'btn btn-primary btn-sm ', method: :POST %></th></div>
               <% else %>
-                 <div align="left"><th><%= link_to 'フォローする', follow_path(@user.id), class: 'btn btn-primary  btn-sm  ', method: :POST %></th></div>
+                 <div align="left"><th><%= link_to 'フォローする', follow_path(@user.id), data: {"turbolinks" => false}, class: 'btn btn-primary  btn-sm  ', method: :POST %></th></div>
               <% end %>
             </tr>
             <tr>
-              <div align="left"><td>フォロー : <%= link_to @user.follower.count,  user_follows_path(@user.id) %></td>
-                 <td>フォロワー : <%= link_to @user.followed.count,  user_followers_path(@user.id) %></td></div>
+              <div align="left"><td>フォロー : <%= link_to @user.follower.count,  user_follows_path(@user.id), data: {"turbolinks" => false} %></td>
+                 <td>フォロワー : <%= link_to @user.followed.count,  user_followers_path(@user.id), data: {"turbolinks" => false} %></td></div>
             </tr>
           </table>
         </div>
@@ -31,7 +31,7 @@
             </br>
           <% if user_signed_in? && current_user.id == @user.id %>
             <tr> 
-              <th><%= link_to "スタイリングを編集する", edit_styiling_path, class: "btn btn-success ", role: "botton" %></th>
+              <th><%= link_to "スタイリングを編集する", edit_styiling_path, data: {"turbolinks" => false}, class: "btn btn-success ", role: "botton" %></th>
             </tr>
           <% end %>
             </br> 
@@ -48,14 +48,14 @@
                     <td>
                       <div align="left"><%= @styiling.created_at.strftime('%Y/%m/%d')%>　
                       <% if @styiling.favorited_by?(current_user) %>
-                       <%= link_to styiling_favorites_path(@styiling.id), method: :delete do %>
+                       <%= link_to styiling_favorites_path(@styiling.id), data: {"turbolinks" => false}, method: :delete do %>
                        <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
-                       <%= @styiling.favorites.count %> | <i class="fas fa-comment-alt"></i> <%= link_to "#{@styiling.styiling_comments.count}", styiling_path(@styiling.id) %>
+                       <%= @styiling.favorites.count %> | <i class="fas fa-comment-alt"></i> <%= link_to "#{@styiling.styiling_comments.count}", styiling_path(@styiling.id), data: {"turbolinks" => false} %>
                     <% end %>
                   <% else %>
                       <%= link_to styiling_favorites_path(@styiling.id), method: :post do %>
                       <i class="fa fa-heart" aria-hidden="true"></i>
-                      <%= @styiling.favorites.count %> | <i class="fas fa-comment-alt"></i> <%= link_to "#{@styiling.styiling_comments.count}", styiling_path(@styiling.id) %>
+                      <%= @styiling.favorites.count %> | <i class="fas fa-comment-alt"></i> <%= link_to "#{@styiling.styiling_comments.count}", styiling_path(@styiling.id), data: {"turbolinks" => false} %>
                  <% end %>
                 <% end %></div></td>
                   </tr>
@@ -64,7 +64,7 @@
                  <tr>
                    <td><%= styiling_comment.user.name %> | <%= styiling_comment.created_at.strftime('%Y/%m/%d') %> 　　 <%= styiling_comment.comment %></td>
                    <% if styiling_comment.user == current_user%>
-                   <td><%= link_to "削除", styiling_styiling_comment_path(styiling_comment.styiling, styiling_comment), method: :delete, class: "btn btn-danger btn-xs" %></td>
+                   <td><%= link_to "削除", styiling_styiling_comment_path(styiling_comment.styiling, styiling_comment), data: {"turbolinks" => false}, method: :delete, class: "btn btn-danger btn-xs" %></td>
                    <% end %>
                  </tr>
                 </table>
