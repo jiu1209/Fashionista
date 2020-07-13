@@ -119,6 +119,17 @@ $(document).on('turbolinks:load', function() {
 });
 
 $(document).on('turbolinks:load', function() {
+   $("#skippr-slider").skippr({
+      transition: 'slide',
+      autoPlay: true,
+      arrows : false,
+      speed : 1000,
+      autoPlayDuration : 5000,
+      transition: "fade",
+  });
+});
+
+$(document).on('turbolinks:load', function() {
   $('.menu-trigger').on('click', function(event) {
     $(this).toggleClass('active');
     $('#sp-menu').fadeToggle();
