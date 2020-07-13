@@ -15,8 +15,8 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
-$(function() {
- 
+
+$(document).on('turbolinks:load', function() {  
   $('#back a').on('click',function(event){
     $('body, html').animate({
       scrollTop:0
@@ -25,6 +25,8 @@ $(function() {
   });
  
 });
+
+$(document).on('turbolinks:load', function() { 
 $('#animation').css('visibility','hidden');
 $(window).scroll(function(){
  var windowHeight = $(window).height(),
@@ -37,6 +39,7 @@ $(window).scroll(function(){
  });
 });
 
+$(document).on('turbolinks:load', function() { 
 $('#animation1').css('visibility','hidden');
 $(window).scroll(function(){
  var windowHeight = $(window).height(),
@@ -49,6 +52,7 @@ $(window).scroll(function(){
  });
 });
 
+$(document).on('turbolinks:load', function() { 
 $('#animation2').css('visibility','hidden');
 $(window).scroll(function(){
  var windowHeight = $(window).height(),
@@ -61,6 +65,7 @@ $(window).scroll(function(){
  });
 });
 
+$(document).on('turbolinks:load', function() { 
 $('#animation3').css('visibility','hidden');
 $(window).scroll(function(){
  var windowHeight = $(window).height(),
@@ -73,6 +78,7 @@ $(window).scroll(function(){
  });
 });
 
+$(document).on('turbolinks:load', function() { 
 $('#animation4').css('visibility','hidden');
 $(window).scroll(function(){
  var windowHeight = $(window).height(),
@@ -85,6 +91,7 @@ $(window).scroll(function(){
  });
 });
 
+$(document).on('turbolinks:load', function() { 
 $('#animation5').css('visibility','hidden');
 $(window).scroll(function(){
  var windowHeight = $(window).height(),
@@ -97,7 +104,7 @@ $(window).scroll(function(){
  });
 });
 
-$(function() {
+$(document).on('turbolinks:load', function() {
   setTimeout(function(){
     $('.start p').fadeIn(1600);
   },500); 
@@ -106,7 +113,7 @@ $(function() {
   },2500);
 });
 
-$(document).ready(function(){
+$(document).on('turbolinks:load', function() { 
    $("#skippr-slider").skippr({
       transition: 'slide',
       autoPlay: true,
@@ -117,7 +124,7 @@ $(document).ready(function(){
   });
 });
 
-$(function() {
+$(document).on('turbolinks:load', function() { 
   $('.menu-trigger').on('click', function(event) {
     $(this).toggleClass('active');
     $('#sp-menu').fadeToggle();
