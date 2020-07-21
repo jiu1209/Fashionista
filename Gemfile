@@ -39,6 +39,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rbenv'
 end
 
 group :development do
@@ -71,10 +75,12 @@ gem 'kaminari','~> 1.2.1'
 gem 'pry-byebug'
 gem 'ransack'
 gem 'font-awesome-sass', '~> 5.4.1'
-gem 'rqrcode'
-gem 'letter_opener_web', :group => :development
+#gem 'rqrcode'
+#gem 'letter_opener_web', :group => :development
 gem 'rails-i18n'
 gem 'dotenv-rails'
+gem 'ed25519'
+gem 'bcrypt_pbkdf'
 group :production do
   gem 'mysql2'
 end
