@@ -49,6 +49,12 @@ https://docs.google.com/spreadsheets/d/1xK6rnAlcNiCb0jiC0HNpmxxccSSBEZj4/edit#gi
 ・テスト仕様書
 https://1drv.ms/x/s!AllHd8HsX8WrdcPAumC96SSDHG0
 
+・AWSシステム設計書
+https://1drv.ms/p/s!AllHd8HsX8WreN_dYdg6gidSPJ4
+
+・AWSインフラ設計書
+https://docs.google.com/spreadsheets/d/1b4n2ganmh1fN5fZ4p2dM8IGDSnHkYf0Sswos9vvRhYg/edit#gid=0
+
 ### 機能一覧
 
 https://docs.google.com/spreadsheets/d/10VqEwGp5fJVxd7J9cf7pGzEx7rzMmm0DN2bsS5TeiD0/edit#gid=0
