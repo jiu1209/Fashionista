@@ -19,7 +19,7 @@
                   </tr>
                   <tr>
                     <td><%= link_to attachment_image_tag(gender.user, :image, format: "jpeg",fallback:"no_image.jpg", size: "30x30"),show_info_path(gender.user.id), data: {"turbolinks" => false} %>
-                        <%= link_to gender.user.name, show_info_path(gender.user.id), data: {"turbolinks" => false} %> | <%= gender.user.height %></td>
+                        <%= link_to gender.user.name, show_info_path(gender.user.id), data: {"turbolinks" => false} %> | <%= gender.user.height %>cm</td>
                   </tr>
                 </table>
               </div>

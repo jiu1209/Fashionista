@@ -35,7 +35,7 @@
                     </tr>
                     <tr>
                     <td><%= link_to attachment_image_tag(styiling.user, :image, format: "jpeg", fallback:"no_image.jpg", size: "30x30"),show_info_path(styiling.user.id), data: {"turbolinks" => false} %>
-                        <%= link_to styiling.user.name, show_info_path(styiling.user.id), data: {"turbolinks" => false} %> | <%= styiling.user.height %></td>
+                        <%= link_to styiling.user.name, show_info_path(styiling.user.id), data: {"turbolinks" => false} %> | <%= styiling.user.height %>cm</td>
                   </tr>
                 </table>
               </div>

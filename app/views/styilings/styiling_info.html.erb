@@ -7,7 +7,7 @@
           <table>
             <tr>
               <th><%= link_to attachment_image_tag(@user, :image, format: "jpeg", fallback:"no_image.jpg", size: "100x100"),show_info_path(@user.id), data: {"turbolinks" => false}%></th>
-              <td><h4><%=  @user.name %></h4><%= @user.height %> | <%= @user.gender %> | <%= @user.favorite_brand %></td>
+              <td><h4><%=  @user.name %></h4><%= @user.height %>cm | <%= @user.gender %> | <%= @user.favorite_brand %></td>
             </tr>
           </table>
         </div>
