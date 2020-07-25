@@ -18,6 +18,8 @@ class User < ApplicationRecord
   validates :name, length: {minimum: 2}
   validates :name, length: {maximum: 20}
   validates :introduction, length: {maximum: 50}
+  validates :height, length: {minimum: 3}
+  validates :height, length: {maximum: 3}
 
    def follow(user_id)
     follower.create(followed_id: user_id)
