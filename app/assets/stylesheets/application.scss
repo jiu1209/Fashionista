@@ -30,9 +30,6 @@ table{
   border-collapse: collapse;
   border-spacing: 0;
 }
-img:hover {
-   opacity: 0.5;
-}
 table th,table td{
   padding: 20px 0;
   text-align: center;
@@ -54,9 +51,15 @@ tr .none{
    object-fit: cover;
    border-radius: 50%;
 }
+.image:hover {
+   opacity: 0.5;
+}
 .styling_image{
    object-fit: cover;
    border-radius: 5%;
+}
+.styling_image:hover {
+   opacity: 0.5;
 }
 .navheadline {
   margin-left: 50px;
