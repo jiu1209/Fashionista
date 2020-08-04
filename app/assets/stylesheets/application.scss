@@ -116,6 +116,7 @@ footer .sns a:hover {
   -webkit-transition: all, 0.3s;
           transition: all, 0.3s;
   background-color: #222222;
+  font-size: 2em;
 }
 footer .sns .insta {
   font-size: 1.2em;
@@ -255,4 +256,10 @@ h2:first-letter {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+}
+li h4 {
+  transition: font-size 1s;
+}
+li h4:hover {
+  font-size: 2em;
 }
