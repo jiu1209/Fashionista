@@ -8,6 +8,7 @@ class StyilingCommentsController < ApplicationController
 	end
 
 	def destroy
+        comment = current_user
 		StyilingComment.find_by(id: params[:id], styiling_id: params[:styiling_id]).destroy
         redirect_to styiling_path(params[:styiling_id])
 	end
