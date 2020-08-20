@@ -13,6 +13,7 @@
                 <table>
               	  <tr>
                     <td><%= link_to attachment_image_tag(gender, :styling_image, format: "jpeg", size: "250x330"), styiling_info_path(gender.id), data: {"turbolinks" => false} %>
+                       <div align="left"><%= gender.created_at.strftime('%Y/%m/%d')%>
                      <tr>
                   	   <td><i class="fas fa-chess-queen"></i> 第<%= i %>位</td>
                      </tr>
