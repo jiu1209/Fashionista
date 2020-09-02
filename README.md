@@ -55,32 +55,27 @@ Vagrant/VirtualBox
 
 
 ## 設計書
-・画面遷移図
+- 画面遷移図
 https://app.diagrams.net/#G1zkdW9mCmgqvlP7FW4AAQM1jatA4nYWPG
 
-・ワイヤーフレーム
+- ワイヤーフレーム
 https://app.diagrams.net/#G15-OGpVSXtZ3rnNyjZNjCX9hSZqCgGGSZ
 
-・データベース設計(ER図)
+- データベース設計(ER図)
 https://app.diagrams.net/#G17NbNUpoBFW2FRAEM6RXjSMXd5ZoL0jiP
 
-・テーブル定義書
+- テーブル定義書
 https://docs.google.com/spreadsheets/d/1puqw5HbG80Ck16tByaVoRqizEL6sqtS0/edit#gid=1142282894
 
-・アプリケーション詳細設計
+- アプリケーション詳細設計
 https://docs.google.com/spreadsheets/d/1xK6rnAlcNiCb0jiC0HNpmxxccSSBEZj4/edit#gid=1739920144
 
-・テスト仕様書
+- テスト仕様書
 https://1drv.ms/x/s!AllHd8HsX8WrdcPAumC96SSDHG0
 
-・AWSシステム設計書
+- AWSシステム設計書
 https://1drv.ms/p/s!AllHd8HsX8WreN_dYdg6gidSPJ4
 
-・AWSインフラ設計書
+- AWSインフラ設計書
 https://docs.google.com/spreadsheets/d/1b4n2ganmh1fN5fZ4p2dM8IGDSnHkYf0Sswos9vvRhYg/edit#gid=0
-
-### 機能一覧
-
-https://docs.google.com/spreadsheets/d/10VqEwGp5fJVxd7J9cf7pGzEx7rzMmm0DN2bsS5TeiD0/edit#gid=0
-
 
